@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secureu_mobile/screens/create_secret/bloc/create_secret_bloc.dart';
+import 'package:passworld/screens/create_secret/bloc/create_secret_bloc.dart';
 
 class CreateSecretForm extends StatefulWidget {
   const CreateSecretForm({super.key});
@@ -18,27 +18,27 @@ class _CreateSecretFormState extends State<CreateSecretForm> {
   var _hidePasswordField = true;
 
   String? _validateName(String? name) {
-    if (name == null) return 'Nama tidak boleh kosong';
-    if (name.isEmpty) return 'Nama tidak boleh kosong';
+    if (name == null) return 'Ad boş olamaz';
+    if (name.isEmpty) return 'Ad boş olamaz';
 
     return null;
   }
 
   String? _validateEmailOrUsername(String? emailOrUsername) {
     if (emailOrUsername == null) {
-      return 'Email atau Username tidak boleh kosong';
+      return 'E-posta veya Kullanıcı Adı boş olamaz';
     }
 
     if (emailOrUsername.isEmpty) {
-      return 'Email atau Username tidak boleh kosong';
+      return 'E-posta veya Kullanıcı Adı boş olamaz';
     }
 
     return null;
   }
 
   String? _validatePassword(String? password) {
-    if (password == null) return 'Password tidak boleh kosong';
-    if (password.isEmpty) return 'Password tidak boleh kosong';
+    if (password == null) return 'Şifre boş olamaz';
+    if (password.isEmpty) return 'Şifre boş olamaz';
 
     return null;
   }
@@ -73,7 +73,7 @@ class _CreateSecretFormState extends State<CreateSecretForm> {
                 color: Colors.white,
               ),
               decoration: InputDecoration(
-                labelText: 'Nama Rahasia',
+                labelText: 'Gizli Ad',
                 hintStyle: theme.inputDecorationTheme.hintStyle,
                 labelStyle: theme.inputDecorationTheme.labelStyle,
                 border: theme.inputDecorationTheme.border,
@@ -97,7 +97,7 @@ class _CreateSecretFormState extends State<CreateSecretForm> {
                 color: Colors.white,
               ),
               decoration: InputDecoration(
-                labelText: 'Email atau Username Rahasia',
+                labelText: 'Gizli E-posta veya Kullanıcı Adı',
                 hintStyle: theme.inputDecorationTheme.hintStyle,
                 labelStyle: theme.inputDecorationTheme.labelStyle,
                 border: theme.inputDecorationTheme.border,
@@ -123,7 +123,7 @@ class _CreateSecretFormState extends State<CreateSecretForm> {
                   color: Colors.white,
                 ),
                 decoration: InputDecoration(
-                  labelText: 'Password Rahasia',
+                  labelText: 'Gizli Şifre',
                   hintStyle: theme.inputDecorationTheme.hintStyle,
                   labelStyle: theme.inputDecorationTheme.labelStyle,
                   border: theme.inputDecorationTheme.border,
@@ -177,7 +177,7 @@ class _CreateSecretFormState extends State<CreateSecretForm> {
                 ),
               ),
               child: const Text(
-                'Tambahkan Rahasia',
+                'Gizli Bilgi Ekle',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 16,

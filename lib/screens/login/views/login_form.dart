@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secureu_mobile/screens/login/bloc/login_bloc.dart';
-import 'package:secureu_mobile/extensions.dart';
+import 'package:passworld/screens/login/bloc/login_bloc.dart';
+import 'package:passworld/extensions.dart';
 
 class LoginForm extends StatelessWidget {
   LoginForm({super.key});
@@ -19,11 +19,11 @@ class LoginForm extends StatelessWidget {
 
   String? _emailValidator(String? email) {
     if (email == null || email.isEmpty) {
-      return 'Email tidak boleh kosong';
+      return 'E-posta boş olamaz';
     }
 
     if (!email.isValidEmail) {
-      return 'Email tidak valid';
+      return 'Geçersiz e-posta';
     }
 
     return null;
@@ -31,7 +31,7 @@ class LoginForm extends StatelessWidget {
 
   String? _passwordValidator(String? password) {
     if (password == null || password.isEmpty) {
-      return 'Password tidak boleh kosong';
+      return 'Şifre boş olamaz';
     }
 
     return null;

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'splash_bloc.dart';
 
@@ -23,7 +23,7 @@ mixin _$SplashEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
+    TResult? Function()? started,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,7 +39,7 @@ mixin _$SplashEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult? Function(_Started value)? started,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -54,39 +54,40 @@ mixin _$SplashEvent {
 abstract class $SplashEventCopyWith<$Res> {
   factory $SplashEventCopyWith(
           SplashEvent value, $Res Function(SplashEvent) then) =
-      _$SplashEventCopyWithImpl<$Res>;
+      _$SplashEventCopyWithImpl<$Res, SplashEvent>;
 }
 
 /// @nodoc
-class _$SplashEventCopyWithImpl<$Res> implements $SplashEventCopyWith<$Res> {
+class _$SplashEventCopyWithImpl<$Res, $Val extends SplashEvent>
+    implements $SplashEventCopyWith<$Res> {
   _$SplashEventCopyWithImpl(this._value, this._then);
 
-  final SplashEvent _value;
   // ignore: unused_field
-  final $Res Function(SplashEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+abstract class _$$StartedImplCopyWith<$Res> {
+  factory _$$StartedImplCopyWith(
+          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
+      __$$StartedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res> extends _$SplashEventCopyWithImpl<$Res>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
-      : super(_value, (v) => _then(v as _$_Started));
-
-  @override
-  _$_Started get _value => super._value as _$_Started;
+class __$$StartedImplCopyWithImpl<$Res>
+    extends _$SplashEventCopyWithImpl<$Res, _$StartedImpl>
+    implements _$$StartedImplCopyWith<$Res> {
+  __$$StartedImplCopyWithImpl(
+      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$StartedImpl implements _Started {
+  const _$StartedImpl();
 
   @override
   String toString() {
@@ -94,9 +95,9 @@ class _$_Started implements _Started {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Started);
+        (other.runtimeType == runtimeType && other is _$StartedImpl);
   }
 
   @override
@@ -113,7 +114,7 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
+    TResult? Function()? started,
   }) {
     return started?.call();
   }
@@ -141,7 +142,7 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult? Function(_Started value)? started,
   }) {
     return started?.call(this);
   }
@@ -160,7 +161,7 @@ class _$_Started implements _Started {
 }
 
 abstract class _Started implements SplashEvent {
-  const factory _Started() = _$_Started;
+  const factory _Started() = _$StartedImpl;
 }
 
 /// @nodoc
@@ -174,9 +175,9 @@ mixin _$SplashState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingData,
-    TResult Function()? finishedFetchingData,
+    TResult? Function()? initial,
+    TResult? Function()? fetchingData,
+    TResult? Function()? finishedFetchingData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -196,9 +197,9 @@ mixin _$SplashState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingData value)? fetchingData,
-    TResult Function(_FinishedFetchingData value)? finishedFetchingData,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingData value)? fetchingData,
+    TResult? Function(_FinishedFetchingData value)? finishedFetchingData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -215,39 +216,40 @@ mixin _$SplashState {
 abstract class $SplashStateCopyWith<$Res> {
   factory $SplashStateCopyWith(
           SplashState value, $Res Function(SplashState) then) =
-      _$SplashStateCopyWithImpl<$Res>;
+      _$SplashStateCopyWithImpl<$Res, SplashState>;
 }
 
 /// @nodoc
-class _$SplashStateCopyWithImpl<$Res> implements $SplashStateCopyWith<$Res> {
+class _$SplashStateCopyWithImpl<$Res, $Val extends SplashState>
+    implements $SplashStateCopyWith<$Res> {
   _$SplashStateCopyWithImpl(this._value, this._then);
 
-  final SplashState _value;
   // ignore: unused_field
-  final $Res Function(SplashState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
+abstract class _$$InitialImplCopyWith<$Res> {
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
+      __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitialCopyWithImpl<$Res> extends _$SplashStateCopyWithImpl<$Res>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
-      : super(_value, (v) => _then(v as _$_Initial));
-
-  @override
-  _$_Initial get _value => super._value as _$_Initial;
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$SplashStateCopyWithImpl<$Res, _$InitialImpl>
+    implements _$$InitialImplCopyWith<$Res> {
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$InitialImpl implements _Initial {
+  const _$InitialImpl();
 
   @override
   String toString() {
@@ -255,9 +257,9 @@ class _$_Initial implements _Initial {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -276,9 +278,9 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingData,
-    TResult Function()? finishedFetchingData,
+    TResult? Function()? initial,
+    TResult? Function()? fetchingData,
+    TResult? Function()? finishedFetchingData,
   }) {
     return initial?.call();
   }
@@ -310,9 +312,9 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingData value)? fetchingData,
-    TResult Function(_FinishedFetchingData value)? finishedFetchingData,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingData value)? fetchingData,
+    TResult? Function(_FinishedFetchingData value)? finishedFetchingData,
   }) {
     return initial?.call(this);
   }
@@ -333,32 +335,29 @@ class _$_Initial implements _Initial {
 }
 
 abstract class _Initial implements SplashState {
-  const factory _Initial() = _$_Initial;
+  const factory _Initial() = _$InitialImpl;
 }
 
 /// @nodoc
-abstract class _$$_FetchingDataCopyWith<$Res> {
-  factory _$$_FetchingDataCopyWith(
-          _$_FetchingData value, $Res Function(_$_FetchingData) then) =
-      __$$_FetchingDataCopyWithImpl<$Res>;
+abstract class _$$FetchingDataImplCopyWith<$Res> {
+  factory _$$FetchingDataImplCopyWith(
+          _$FetchingDataImpl value, $Res Function(_$FetchingDataImpl) then) =
+      __$$FetchingDataImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_FetchingDataCopyWithImpl<$Res>
-    extends _$SplashStateCopyWithImpl<$Res>
-    implements _$$_FetchingDataCopyWith<$Res> {
-  __$$_FetchingDataCopyWithImpl(
-      _$_FetchingData _value, $Res Function(_$_FetchingData) _then)
-      : super(_value, (v) => _then(v as _$_FetchingData));
-
-  @override
-  _$_FetchingData get _value => super._value as _$_FetchingData;
+class __$$FetchingDataImplCopyWithImpl<$Res>
+    extends _$SplashStateCopyWithImpl<$Res, _$FetchingDataImpl>
+    implements _$$FetchingDataImplCopyWith<$Res> {
+  __$$FetchingDataImplCopyWithImpl(
+      _$FetchingDataImpl _value, $Res Function(_$FetchingDataImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_FetchingData implements _FetchingData {
-  const _$_FetchingData();
+class _$FetchingDataImpl implements _FetchingData {
+  const _$FetchingDataImpl();
 
   @override
   String toString() {
@@ -366,9 +365,9 @@ class _$_FetchingData implements _FetchingData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_FetchingData);
+        (other.runtimeType == runtimeType && other is _$FetchingDataImpl);
   }
 
   @override
@@ -387,9 +386,9 @@ class _$_FetchingData implements _FetchingData {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingData,
-    TResult Function()? finishedFetchingData,
+    TResult? Function()? initial,
+    TResult? Function()? fetchingData,
+    TResult? Function()? finishedFetchingData,
   }) {
     return fetchingData?.call();
   }
@@ -421,9 +420,9 @@ class _$_FetchingData implements _FetchingData {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingData value)? fetchingData,
-    TResult Function(_FinishedFetchingData value)? finishedFetchingData,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingData value)? fetchingData,
+    TResult? Function(_FinishedFetchingData value)? finishedFetchingData,
   }) {
     return fetchingData?.call(this);
   }
@@ -444,32 +443,29 @@ class _$_FetchingData implements _FetchingData {
 }
 
 abstract class _FetchingData implements SplashState {
-  const factory _FetchingData() = _$_FetchingData;
+  const factory _FetchingData() = _$FetchingDataImpl;
 }
 
 /// @nodoc
-abstract class _$$_FinishedFetchingDataCopyWith<$Res> {
-  factory _$$_FinishedFetchingDataCopyWith(_$_FinishedFetchingData value,
-          $Res Function(_$_FinishedFetchingData) then) =
-      __$$_FinishedFetchingDataCopyWithImpl<$Res>;
+abstract class _$$FinishedFetchingDataImplCopyWith<$Res> {
+  factory _$$FinishedFetchingDataImplCopyWith(_$FinishedFetchingDataImpl value,
+          $Res Function(_$FinishedFetchingDataImpl) then) =
+      __$$FinishedFetchingDataImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_FinishedFetchingDataCopyWithImpl<$Res>
-    extends _$SplashStateCopyWithImpl<$Res>
-    implements _$$_FinishedFetchingDataCopyWith<$Res> {
-  __$$_FinishedFetchingDataCopyWithImpl(_$_FinishedFetchingData _value,
-      $Res Function(_$_FinishedFetchingData) _then)
-      : super(_value, (v) => _then(v as _$_FinishedFetchingData));
-
-  @override
-  _$_FinishedFetchingData get _value => super._value as _$_FinishedFetchingData;
+class __$$FinishedFetchingDataImplCopyWithImpl<$Res>
+    extends _$SplashStateCopyWithImpl<$Res, _$FinishedFetchingDataImpl>
+    implements _$$FinishedFetchingDataImplCopyWith<$Res> {
+  __$$FinishedFetchingDataImplCopyWithImpl(_$FinishedFetchingDataImpl _value,
+      $Res Function(_$FinishedFetchingDataImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_FinishedFetchingData implements _FinishedFetchingData {
-  const _$_FinishedFetchingData();
+class _$FinishedFetchingDataImpl implements _FinishedFetchingData {
+  const _$FinishedFetchingDataImpl();
 
   @override
   String toString() {
@@ -477,9 +473,10 @@ class _$_FinishedFetchingData implements _FinishedFetchingData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_FinishedFetchingData);
+        (other.runtimeType == runtimeType &&
+            other is _$FinishedFetchingDataImpl);
   }
 
   @override
@@ -498,9 +495,9 @@ class _$_FinishedFetchingData implements _FinishedFetchingData {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingData,
-    TResult Function()? finishedFetchingData,
+    TResult? Function()? initial,
+    TResult? Function()? fetchingData,
+    TResult? Function()? finishedFetchingData,
   }) {
     return finishedFetchingData?.call();
   }
@@ -532,9 +529,9 @@ class _$_FinishedFetchingData implements _FinishedFetchingData {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingData value)? fetchingData,
-    TResult Function(_FinishedFetchingData value)? finishedFetchingData,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingData value)? fetchingData,
+    TResult? Function(_FinishedFetchingData value)? finishedFetchingData,
   }) {
     return finishedFetchingData?.call(this);
   }
@@ -555,5 +552,5 @@ class _$_FinishedFetchingData implements _FinishedFetchingData {
 }
 
 abstract class _FinishedFetchingData implements SplashState {
-  const factory _FinishedFetchingData() = _$_FinishedFetchingData;
+  const factory _FinishedFetchingData() = _$FinishedFetchingDataImpl;
 }

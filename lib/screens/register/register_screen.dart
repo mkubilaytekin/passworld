@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secureu_mobile/config/routes.dart';
-import 'package:secureu_mobile/screens/register/bloc/register_bloc.dart';
-import 'package:secureu_mobile/screens/register/views/register_form.dart';
+import 'package:passworld/config/routes.dart';
+import 'package:passworld/screens/register/bloc/register_bloc.dart';
+import 'package:passworld/screens/register/views/register_form.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -25,12 +25,12 @@ class RegisterScreen extends StatelessWidget {
           successSubmittingForm: () {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
-                content: Text('Sukses Membuat User'),
+                content: Text('Başarıyla Kullanıcı Oluşturma'),
                 backgroundColor: Colors.green,
               ),
             );
 
-            // kembali ke login screen
+            // giriş ekranına dön
             Future<void>.delayed(const Duration(seconds: 1)).then((_) {
               Navigator.pop(context);
             });
@@ -53,10 +53,10 @@ class RegisterScreen extends StatelessWidget {
       backgroundColor: theme.appBarTheme.backgroundColor,
       elevation: 0,
       centerTitle: true,
-      title: const Text('Daftar Akun'),
+      title: const Text('Hesap Kaydı'),
       leading: IconButton(
         onPressed: () {
-          Navigator.pushReplacementNamed(context, SecureURoutes.login);
+          Navigator.pushReplacementNamed(context, PassworldRoutes.login);
         },
         icon: const Icon(
           Icons.arrow_back_ios,
@@ -72,7 +72,7 @@ class RegisterScreen extends StatelessWidget {
       children: [
         const Center(
           child: Text(
-            'SecureU',
+            'Passworld',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -85,7 +85,7 @@ class RegisterScreen extends StatelessWidget {
         ),
         const Center(
           child: Text(
-            'Halo Pengguna Baru !',
+            'Merhaba Yeni Kullanıcı !',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.normal,

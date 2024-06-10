@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hive/hive.dart';
-import 'package:secureu_mobile/config/hive_constants.dart';
-import 'package:secureu_mobile/repos/secret_repository.dart';
-import 'package:secureu_mobile/utils/cryptography.dart';
+import 'package:passworld/config/hive_constants.dart';
+import 'package:passworld/repos/secret_repository.dart';
+import 'package:passworld/utils/cryptography.dart';
 
 part 'view_secret_event.dart';
 part 'view_secret_state.dart';
@@ -25,7 +25,7 @@ class ViewSecretBloc extends Bloc<ViewSecretEvent, ViewSecretState> {
           final secretId = appSessionBox.get(HiveConstants.secretId);
 
           if (secretId == null) {
-            print('secret id tidak ditemukan');
+            print('gizli kimlik bulunamadı');
 
             return emit(const ViewSecretState.failedFetchSecret());
           }
@@ -33,7 +33,7 @@ class ViewSecretBloc extends Bloc<ViewSecretEvent, ViewSecretState> {
           final encryptedSecret = await _secretRepo.getSecretById(secretId);
 
           if (encryptedSecret == null) {
-            print('encrypted secret null');
+            print('şifrelenmiş gizli null');
 
             return emit(const ViewSecretState.failedFetchSecret());
           }
@@ -45,7 +45,7 @@ class ViewSecretBloc extends Bloc<ViewSecretEvent, ViewSecretState> {
           final salt = appSessionBox.get(HiveConstants.userEmail);
 
           if (base64KeyString == null || salt == null) {
-            print('base64KeyString atau salt null');
+            print('base64KeyString veya salt null');
 
             return emit(const ViewSecretState.failedFetchSecret());
           }
@@ -57,7 +57,7 @@ class ViewSecretBloc extends Bloc<ViewSecretEvent, ViewSecretState> {
           );
 
           if (decryptedEmailOrUsername == null) {
-            print('Kesalahan saat decrypt email or username');
+            print('E-postanın veya kullanıcı adının şifresi çözülürken hata oluştu');
 
             return emit(const ViewSecretState.failedFetchSecret());
           }
@@ -69,7 +69,7 @@ class ViewSecretBloc extends Bloc<ViewSecretEvent, ViewSecretState> {
           );
 
           if (decryptedPassword == null) {
-            print('Kesalahan saat decrypt password');
+            print('Parolanın şifresini çözerken hata oluştu');
 
             return emit(const ViewSecretState.failedFetchSecret());
           }
@@ -94,7 +94,7 @@ class ViewSecretBloc extends Bloc<ViewSecretEvent, ViewSecretState> {
           if (!appSessionBox.isOpen) {
             return emit(
               const ViewSecretState.failedSubmitForm(
-                msg: 'Terjadi Kesalahan',
+                msg: 'Bir hata var',
               ),
             );
           }
@@ -104,7 +104,7 @@ class ViewSecretBloc extends Bloc<ViewSecretEvent, ViewSecretState> {
           if (secretId == null) {
             return emit(
               const ViewSecretState.failedSubmitForm(
-                msg: 'Terjadi Kesalahan',
+                msg: 'Bir hata var',
               ),
             );
           }
@@ -115,7 +115,7 @@ class ViewSecretBloc extends Bloc<ViewSecretEvent, ViewSecretState> {
           if (encryptionKey == null || email == null) {
             return emit(
               const ViewSecretState.failedSubmitForm(
-                msg: 'Terjadi Kesalahan saat mengambil data',
+                msg: 'Veri alınırken bir hata oluştu',
               ),
             );
           }
@@ -129,7 +129,7 @@ class ViewSecretBloc extends Bloc<ViewSecretEvent, ViewSecretState> {
           if (secretEmailOrUsername == null) {
             return emit(
               const ViewSecretState.failedSubmitForm(
-                msg: 'Terjadi masalah',
+                msg: 'Bir şeyler yanlış gitti',
               ),
             );
           }
@@ -143,7 +143,7 @@ class ViewSecretBloc extends Bloc<ViewSecretEvent, ViewSecretState> {
           if (secretPassword == null) {
             return emit(
               const ViewSecretState.failedSubmitForm(
-                msg: 'Terjadi masalah',
+                msg: 'Bir şeyler yanlış gitti',
               ),
             );
           }
@@ -158,7 +158,7 @@ class ViewSecretBloc extends Bloc<ViewSecretEvent, ViewSecretState> {
           if (updatedSecretId == null) {
             return emit(
               const ViewSecretState.failedSubmitForm(
-                msg: 'Terjadi Kesalahan',
+                msg: 'Bir hata var',
               ),
             );
           }

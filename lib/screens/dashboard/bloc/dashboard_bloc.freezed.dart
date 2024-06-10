@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'dashboard_bloc.dart';
 
@@ -27,11 +27,11 @@ mixin _$DashboardEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? deleteSessionData,
-    TResult Function()? fetchSecretList,
-    TResult Function(String secretId)? setSecretId,
-    TResult Function(String secretId)? deleteSecret,
+    TResult? Function()? started,
+    TResult? Function()? deleteSessionData,
+    TResult? Function()? fetchSecretList,
+    TResult? Function(String secretId)? setSecretId,
+    TResult? Function(String secretId)? deleteSecret,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,11 +55,11 @@ mixin _$DashboardEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_DeleteSessionData value)? deleteSessionData,
-    TResult Function(_FetchSecretList value)? fetchSecretList,
-    TResult Function(_SetSecretId value)? setSecretId,
-    TResult Function(_DeleteSecret value)? deleteSecret,
+    TResult? Function(_Started value)? started,
+    TResult? Function(_DeleteSessionData value)? deleteSessionData,
+    TResult? Function(_FetchSecretList value)? fetchSecretList,
+    TResult? Function(_SetSecretId value)? setSecretId,
+    TResult? Function(_DeleteSecret value)? deleteSecret,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -78,40 +78,40 @@ mixin _$DashboardEvent {
 abstract class $DashboardEventCopyWith<$Res> {
   factory $DashboardEventCopyWith(
           DashboardEvent value, $Res Function(DashboardEvent) then) =
-      _$DashboardEventCopyWithImpl<$Res>;
+      _$DashboardEventCopyWithImpl<$Res, DashboardEvent>;
 }
 
 /// @nodoc
-class _$DashboardEventCopyWithImpl<$Res>
+class _$DashboardEventCopyWithImpl<$Res, $Val extends DashboardEvent>
     implements $DashboardEventCopyWith<$Res> {
   _$DashboardEventCopyWithImpl(this._value, this._then);
 
-  final DashboardEvent _value;
   // ignore: unused_field
-  final $Res Function(DashboardEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+abstract class _$$StartedImplCopyWith<$Res> {
+  factory _$$StartedImplCopyWith(
+          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
+      __$$StartedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res> extends _$DashboardEventCopyWithImpl<$Res>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
-      : super(_value, (v) => _then(v as _$_Started));
-
-  @override
-  _$_Started get _value => super._value as _$_Started;
+class __$$StartedImplCopyWithImpl<$Res>
+    extends _$DashboardEventCopyWithImpl<$Res, _$StartedImpl>
+    implements _$$StartedImplCopyWith<$Res> {
+  __$$StartedImplCopyWithImpl(
+      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$StartedImpl implements _Started {
+  const _$StartedImpl();
 
   @override
   String toString() {
@@ -119,9 +119,9 @@ class _$_Started implements _Started {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Started);
+        (other.runtimeType == runtimeType && other is _$StartedImpl);
   }
 
   @override
@@ -142,11 +142,11 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? deleteSessionData,
-    TResult Function()? fetchSecretList,
-    TResult Function(String secretId)? setSecretId,
-    TResult Function(String secretId)? deleteSecret,
+    TResult? Function()? started,
+    TResult? Function()? deleteSessionData,
+    TResult? Function()? fetchSecretList,
+    TResult? Function(String secretId)? setSecretId,
+    TResult? Function(String secretId)? deleteSecret,
   }) {
     return started?.call();
   }
@@ -182,11 +182,11 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_DeleteSessionData value)? deleteSessionData,
-    TResult Function(_FetchSecretList value)? fetchSecretList,
-    TResult Function(_SetSecretId value)? setSecretId,
-    TResult Function(_DeleteSecret value)? deleteSecret,
+    TResult? Function(_Started value)? started,
+    TResult? Function(_DeleteSessionData value)? deleteSessionData,
+    TResult? Function(_FetchSecretList value)? fetchSecretList,
+    TResult? Function(_SetSecretId value)? setSecretId,
+    TResult? Function(_DeleteSecret value)? deleteSecret,
   }) {
     return started?.call(this);
   }
@@ -209,32 +209,29 @@ class _$_Started implements _Started {
 }
 
 abstract class _Started implements DashboardEvent {
-  const factory _Started() = _$_Started;
+  const factory _Started() = _$StartedImpl;
 }
 
 /// @nodoc
-abstract class _$$_DeleteSessionDataCopyWith<$Res> {
-  factory _$$_DeleteSessionDataCopyWith(_$_DeleteSessionData value,
-          $Res Function(_$_DeleteSessionData) then) =
-      __$$_DeleteSessionDataCopyWithImpl<$Res>;
+abstract class _$$DeleteSessionDataImplCopyWith<$Res> {
+  factory _$$DeleteSessionDataImplCopyWith(_$DeleteSessionDataImpl value,
+          $Res Function(_$DeleteSessionDataImpl) then) =
+      __$$DeleteSessionDataImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_DeleteSessionDataCopyWithImpl<$Res>
-    extends _$DashboardEventCopyWithImpl<$Res>
-    implements _$$_DeleteSessionDataCopyWith<$Res> {
-  __$$_DeleteSessionDataCopyWithImpl(
-      _$_DeleteSessionData _value, $Res Function(_$_DeleteSessionData) _then)
-      : super(_value, (v) => _then(v as _$_DeleteSessionData));
-
-  @override
-  _$_DeleteSessionData get _value => super._value as _$_DeleteSessionData;
+class __$$DeleteSessionDataImplCopyWithImpl<$Res>
+    extends _$DashboardEventCopyWithImpl<$Res, _$DeleteSessionDataImpl>
+    implements _$$DeleteSessionDataImplCopyWith<$Res> {
+  __$$DeleteSessionDataImplCopyWithImpl(_$DeleteSessionDataImpl _value,
+      $Res Function(_$DeleteSessionDataImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_DeleteSessionData implements _DeleteSessionData {
-  const _$_DeleteSessionData();
+class _$DeleteSessionDataImpl implements _DeleteSessionData {
+  const _$DeleteSessionDataImpl();
 
   @override
   String toString() {
@@ -242,9 +239,9 @@ class _$_DeleteSessionData implements _DeleteSessionData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_DeleteSessionData);
+        (other.runtimeType == runtimeType && other is _$DeleteSessionDataImpl);
   }
 
   @override
@@ -265,11 +262,11 @@ class _$_DeleteSessionData implements _DeleteSessionData {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? deleteSessionData,
-    TResult Function()? fetchSecretList,
-    TResult Function(String secretId)? setSecretId,
-    TResult Function(String secretId)? deleteSecret,
+    TResult? Function()? started,
+    TResult? Function()? deleteSessionData,
+    TResult? Function()? fetchSecretList,
+    TResult? Function(String secretId)? setSecretId,
+    TResult? Function(String secretId)? deleteSecret,
   }) {
     return deleteSessionData?.call();
   }
@@ -305,11 +302,11 @@ class _$_DeleteSessionData implements _DeleteSessionData {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_DeleteSessionData value)? deleteSessionData,
-    TResult Function(_FetchSecretList value)? fetchSecretList,
-    TResult Function(_SetSecretId value)? setSecretId,
-    TResult Function(_DeleteSecret value)? deleteSecret,
+    TResult? Function(_Started value)? started,
+    TResult? Function(_DeleteSessionData value)? deleteSessionData,
+    TResult? Function(_FetchSecretList value)? fetchSecretList,
+    TResult? Function(_SetSecretId value)? setSecretId,
+    TResult? Function(_DeleteSecret value)? deleteSecret,
   }) {
     return deleteSessionData?.call(this);
   }
@@ -332,32 +329,29 @@ class _$_DeleteSessionData implements _DeleteSessionData {
 }
 
 abstract class _DeleteSessionData implements DashboardEvent {
-  const factory _DeleteSessionData() = _$_DeleteSessionData;
+  const factory _DeleteSessionData() = _$DeleteSessionDataImpl;
 }
 
 /// @nodoc
-abstract class _$$_FetchSecretListCopyWith<$Res> {
-  factory _$$_FetchSecretListCopyWith(
-          _$_FetchSecretList value, $Res Function(_$_FetchSecretList) then) =
-      __$$_FetchSecretListCopyWithImpl<$Res>;
+abstract class _$$FetchSecretListImplCopyWith<$Res> {
+  factory _$$FetchSecretListImplCopyWith(_$FetchSecretListImpl value,
+          $Res Function(_$FetchSecretListImpl) then) =
+      __$$FetchSecretListImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_FetchSecretListCopyWithImpl<$Res>
-    extends _$DashboardEventCopyWithImpl<$Res>
-    implements _$$_FetchSecretListCopyWith<$Res> {
-  __$$_FetchSecretListCopyWithImpl(
-      _$_FetchSecretList _value, $Res Function(_$_FetchSecretList) _then)
-      : super(_value, (v) => _then(v as _$_FetchSecretList));
-
-  @override
-  _$_FetchSecretList get _value => super._value as _$_FetchSecretList;
+class __$$FetchSecretListImplCopyWithImpl<$Res>
+    extends _$DashboardEventCopyWithImpl<$Res, _$FetchSecretListImpl>
+    implements _$$FetchSecretListImplCopyWith<$Res> {
+  __$$FetchSecretListImplCopyWithImpl(
+      _$FetchSecretListImpl _value, $Res Function(_$FetchSecretListImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_FetchSecretList implements _FetchSecretList {
-  const _$_FetchSecretList();
+class _$FetchSecretListImpl implements _FetchSecretList {
+  const _$FetchSecretListImpl();
 
   @override
   String toString() {
@@ -365,9 +359,9 @@ class _$_FetchSecretList implements _FetchSecretList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_FetchSecretList);
+        (other.runtimeType == runtimeType && other is _$FetchSecretListImpl);
   }
 
   @override
@@ -388,11 +382,11 @@ class _$_FetchSecretList implements _FetchSecretList {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? deleteSessionData,
-    TResult Function()? fetchSecretList,
-    TResult Function(String secretId)? setSecretId,
-    TResult Function(String secretId)? deleteSecret,
+    TResult? Function()? started,
+    TResult? Function()? deleteSessionData,
+    TResult? Function()? fetchSecretList,
+    TResult? Function(String secretId)? setSecretId,
+    TResult? Function(String secretId)? deleteSecret,
   }) {
     return fetchSecretList?.call();
   }
@@ -428,11 +422,11 @@ class _$_FetchSecretList implements _FetchSecretList {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_DeleteSessionData value)? deleteSessionData,
-    TResult Function(_FetchSecretList value)? fetchSecretList,
-    TResult Function(_SetSecretId value)? setSecretId,
-    TResult Function(_DeleteSecret value)? deleteSecret,
+    TResult? Function(_Started value)? started,
+    TResult? Function(_DeleteSessionData value)? deleteSessionData,
+    TResult? Function(_FetchSecretList value)? fetchSecretList,
+    TResult? Function(_SetSecretId value)? setSecretId,
+    TResult? Function(_DeleteSecret value)? deleteSecret,
   }) {
     return fetchSecretList?.call(this);
   }
@@ -455,34 +449,33 @@ class _$_FetchSecretList implements _FetchSecretList {
 }
 
 abstract class _FetchSecretList implements DashboardEvent {
-  const factory _FetchSecretList() = _$_FetchSecretList;
+  const factory _FetchSecretList() = _$FetchSecretListImpl;
 }
 
 /// @nodoc
-abstract class _$$_SetSecretIdCopyWith<$Res> {
-  factory _$$_SetSecretIdCopyWith(
-          _$_SetSecretId value, $Res Function(_$_SetSecretId) then) =
-      __$$_SetSecretIdCopyWithImpl<$Res>;
+abstract class _$$SetSecretIdImplCopyWith<$Res> {
+  factory _$$SetSecretIdImplCopyWith(
+          _$SetSecretIdImpl value, $Res Function(_$SetSecretIdImpl) then) =
+      __$$SetSecretIdImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String secretId});
 }
 
 /// @nodoc
-class __$$_SetSecretIdCopyWithImpl<$Res>
-    extends _$DashboardEventCopyWithImpl<$Res>
-    implements _$$_SetSecretIdCopyWith<$Res> {
-  __$$_SetSecretIdCopyWithImpl(
-      _$_SetSecretId _value, $Res Function(_$_SetSecretId) _then)
-      : super(_value, (v) => _then(v as _$_SetSecretId));
+class __$$SetSecretIdImplCopyWithImpl<$Res>
+    extends _$DashboardEventCopyWithImpl<$Res, _$SetSecretIdImpl>
+    implements _$$SetSecretIdImplCopyWith<$Res> {
+  __$$SetSecretIdImplCopyWithImpl(
+      _$SetSecretIdImpl _value, $Res Function(_$SetSecretIdImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_SetSecretId get _value => super._value as _$_SetSecretId;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? secretId = freezed,
+    Object? secretId = null,
   }) {
-    return _then(_$_SetSecretId(
-      secretId: secretId == freezed
+    return _then(_$SetSecretIdImpl(
+      secretId: null == secretId
           ? _value.secretId
           : secretId // ignore: cast_nullable_to_non_nullable
               as String,
@@ -492,8 +485,8 @@ class __$$_SetSecretIdCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SetSecretId implements _SetSecretId {
-  const _$_SetSecretId({required this.secretId});
+class _$SetSecretIdImpl implements _SetSecretId {
+  const _$SetSecretIdImpl({required this.secretId});
 
   @override
   final String secretId;
@@ -504,21 +497,22 @@ class _$_SetSecretId implements _SetSecretId {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetSecretId &&
-            const DeepCollectionEquality().equals(other.secretId, secretId));
+            other is _$SetSecretIdImpl &&
+            (identical(other.secretId, secretId) ||
+                other.secretId == secretId));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(secretId));
+  int get hashCode => Object.hash(runtimeType, secretId);
 
   @JsonKey(ignore: true)
   @override
-  _$$_SetSecretIdCopyWith<_$_SetSecretId> get copyWith =>
-      __$$_SetSecretIdCopyWithImpl<_$_SetSecretId>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$SetSecretIdImplCopyWith<_$SetSecretIdImpl> get copyWith =>
+      __$$SetSecretIdImplCopyWithImpl<_$SetSecretIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -535,11 +529,11 @@ class _$_SetSecretId implements _SetSecretId {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? deleteSessionData,
-    TResult Function()? fetchSecretList,
-    TResult Function(String secretId)? setSecretId,
-    TResult Function(String secretId)? deleteSecret,
+    TResult? Function()? started,
+    TResult? Function()? deleteSessionData,
+    TResult? Function()? fetchSecretList,
+    TResult? Function(String secretId)? setSecretId,
+    TResult? Function(String secretId)? deleteSecret,
   }) {
     return setSecretId?.call(secretId);
   }
@@ -575,11 +569,11 @@ class _$_SetSecretId implements _SetSecretId {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_DeleteSessionData value)? deleteSessionData,
-    TResult Function(_FetchSecretList value)? fetchSecretList,
-    TResult Function(_SetSecretId value)? setSecretId,
-    TResult Function(_DeleteSecret value)? deleteSecret,
+    TResult? Function(_Started value)? started,
+    TResult? Function(_DeleteSessionData value)? deleteSessionData,
+    TResult? Function(_FetchSecretList value)? fetchSecretList,
+    TResult? Function(_SetSecretId value)? setSecretId,
+    TResult? Function(_DeleteSecret value)? deleteSecret,
   }) {
     return setSecretId?.call(this);
   }
@@ -602,39 +596,39 @@ class _$_SetSecretId implements _SetSecretId {
 }
 
 abstract class _SetSecretId implements DashboardEvent {
-  const factory _SetSecretId({required final String secretId}) = _$_SetSecretId;
+  const factory _SetSecretId({required final String secretId}) =
+      _$SetSecretIdImpl;
 
   String get secretId;
   @JsonKey(ignore: true)
-  _$$_SetSecretIdCopyWith<_$_SetSecretId> get copyWith =>
+  _$$SetSecretIdImplCopyWith<_$SetSecretIdImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_DeleteSecretCopyWith<$Res> {
-  factory _$$_DeleteSecretCopyWith(
-          _$_DeleteSecret value, $Res Function(_$_DeleteSecret) then) =
-      __$$_DeleteSecretCopyWithImpl<$Res>;
+abstract class _$$DeleteSecretImplCopyWith<$Res> {
+  factory _$$DeleteSecretImplCopyWith(
+          _$DeleteSecretImpl value, $Res Function(_$DeleteSecretImpl) then) =
+      __$$DeleteSecretImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String secretId});
 }
 
 /// @nodoc
-class __$$_DeleteSecretCopyWithImpl<$Res>
-    extends _$DashboardEventCopyWithImpl<$Res>
-    implements _$$_DeleteSecretCopyWith<$Res> {
-  __$$_DeleteSecretCopyWithImpl(
-      _$_DeleteSecret _value, $Res Function(_$_DeleteSecret) _then)
-      : super(_value, (v) => _then(v as _$_DeleteSecret));
+class __$$DeleteSecretImplCopyWithImpl<$Res>
+    extends _$DashboardEventCopyWithImpl<$Res, _$DeleteSecretImpl>
+    implements _$$DeleteSecretImplCopyWith<$Res> {
+  __$$DeleteSecretImplCopyWithImpl(
+      _$DeleteSecretImpl _value, $Res Function(_$DeleteSecretImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_DeleteSecret get _value => super._value as _$_DeleteSecret;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? secretId = freezed,
+    Object? secretId = null,
   }) {
-    return _then(_$_DeleteSecret(
-      secretId: secretId == freezed
+    return _then(_$DeleteSecretImpl(
+      secretId: null == secretId
           ? _value.secretId
           : secretId // ignore: cast_nullable_to_non_nullable
               as String,
@@ -644,8 +638,8 @@ class __$$_DeleteSecretCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DeleteSecret implements _DeleteSecret {
-  const _$_DeleteSecret({required this.secretId});
+class _$DeleteSecretImpl implements _DeleteSecret {
+  const _$DeleteSecretImpl({required this.secretId});
 
   @override
   final String secretId;
@@ -656,21 +650,22 @@ class _$_DeleteSecret implements _DeleteSecret {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeleteSecret &&
-            const DeepCollectionEquality().equals(other.secretId, secretId));
+            other is _$DeleteSecretImpl &&
+            (identical(other.secretId, secretId) ||
+                other.secretId == secretId));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(secretId));
+  int get hashCode => Object.hash(runtimeType, secretId);
 
   @JsonKey(ignore: true)
   @override
-  _$$_DeleteSecretCopyWith<_$_DeleteSecret> get copyWith =>
-      __$$_DeleteSecretCopyWithImpl<_$_DeleteSecret>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DeleteSecretImplCopyWith<_$DeleteSecretImpl> get copyWith =>
+      __$$DeleteSecretImplCopyWithImpl<_$DeleteSecretImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -687,11 +682,11 @@ class _$_DeleteSecret implements _DeleteSecret {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function()? deleteSessionData,
-    TResult Function()? fetchSecretList,
-    TResult Function(String secretId)? setSecretId,
-    TResult Function(String secretId)? deleteSecret,
+    TResult? Function()? started,
+    TResult? Function()? deleteSessionData,
+    TResult? Function()? fetchSecretList,
+    TResult? Function(String secretId)? setSecretId,
+    TResult? Function(String secretId)? deleteSecret,
   }) {
     return deleteSecret?.call(secretId);
   }
@@ -727,11 +722,11 @@ class _$_DeleteSecret implements _DeleteSecret {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_DeleteSessionData value)? deleteSessionData,
-    TResult Function(_FetchSecretList value)? fetchSecretList,
-    TResult Function(_SetSecretId value)? setSecretId,
-    TResult Function(_DeleteSecret value)? deleteSecret,
+    TResult? Function(_Started value)? started,
+    TResult? Function(_DeleteSessionData value)? deleteSessionData,
+    TResult? Function(_FetchSecretList value)? fetchSecretList,
+    TResult? Function(_SetSecretId value)? setSecretId,
+    TResult? Function(_DeleteSecret value)? deleteSecret,
   }) {
     return deleteSecret?.call(this);
   }
@@ -755,11 +750,11 @@ class _$_DeleteSecret implements _DeleteSecret {
 
 abstract class _DeleteSecret implements DashboardEvent {
   const factory _DeleteSecret({required final String secretId}) =
-      _$_DeleteSecret;
+      _$DeleteSecretImpl;
 
   String get secretId;
   @JsonKey(ignore: true)
-  _$$_DeleteSecretCopyWith<_$_DeleteSecret> get copyWith =>
+  _$$DeleteSecretImplCopyWith<_$DeleteSecretImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -779,14 +774,14 @@ mixin _$DashboardState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(String email)? successFetchEmail,
-    TResult Function()? successDeleteSessionData,
-    TResult Function()? fetchingSecrets,
-    TResult Function(List<Secret> secrets)? successFetchingSecrets,
-    TResult Function(String msg)? failedFetchingSecrets,
-    TResult Function(String msg)? failedDeletingSecret,
-    TResult Function()? successDeletingSecret,
+    TResult? Function()? initial,
+    TResult? Function(String email)? successFetchEmail,
+    TResult? Function()? successDeleteSessionData,
+    TResult? Function()? fetchingSecrets,
+    TResult? Function(List<Secret> secrets)? successFetchingSecrets,
+    TResult? Function(String msg)? failedFetchingSecrets,
+    TResult? Function(String msg)? failedDeletingSecret,
+    TResult? Function()? successDeletingSecret,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -820,14 +815,15 @@ mixin _$DashboardState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_SuccecssFetchEmail value)? successFetchEmail,
-    TResult Function(_SuccessDeleteSessionData value)? successDeleteSessionData,
-    TResult Function(_FetchingSecrets value)? fetchingSecrets,
-    TResult Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
-    TResult Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
-    TResult Function(_FailedDeletingSecret value)? failedDeletingSecret,
-    TResult Function(_SuccessDeletingSecret value)? successDeletingSecret,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_SuccecssFetchEmail value)? successFetchEmail,
+    TResult? Function(_SuccessDeleteSessionData value)?
+        successDeleteSessionData,
+    TResult? Function(_FetchingSecrets value)? fetchingSecrets,
+    TResult? Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
+    TResult? Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
+    TResult? Function(_FailedDeletingSecret value)? failedDeletingSecret,
+    TResult? Function(_SuccessDeletingSecret value)? successDeletingSecret,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -849,40 +845,40 @@ mixin _$DashboardState {
 abstract class $DashboardStateCopyWith<$Res> {
   factory $DashboardStateCopyWith(
           DashboardState value, $Res Function(DashboardState) then) =
-      _$DashboardStateCopyWithImpl<$Res>;
+      _$DashboardStateCopyWithImpl<$Res, DashboardState>;
 }
 
 /// @nodoc
-class _$DashboardStateCopyWithImpl<$Res>
+class _$DashboardStateCopyWithImpl<$Res, $Val extends DashboardState>
     implements $DashboardStateCopyWith<$Res> {
   _$DashboardStateCopyWithImpl(this._value, this._then);
 
-  final DashboardState _value;
   // ignore: unused_field
-  final $Res Function(DashboardState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
+abstract class _$$InitialImplCopyWith<$Res> {
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
+      __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitialCopyWithImpl<$Res> extends _$DashboardStateCopyWithImpl<$Res>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
-      : super(_value, (v) => _then(v as _$_Initial));
-
-  @override
-  _$_Initial get _value => super._value as _$_Initial;
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$InitialImpl>
+    implements _$$InitialImplCopyWith<$Res> {
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$InitialImpl implements _Initial {
+  const _$InitialImpl();
 
   @override
   String toString() {
@@ -890,9 +886,9 @@ class _$_Initial implements _Initial {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -916,14 +912,14 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(String email)? successFetchEmail,
-    TResult Function()? successDeleteSessionData,
-    TResult Function()? fetchingSecrets,
-    TResult Function(List<Secret> secrets)? successFetchingSecrets,
-    TResult Function(String msg)? failedFetchingSecrets,
-    TResult Function(String msg)? failedDeletingSecret,
-    TResult Function()? successDeletingSecret,
+    TResult? Function()? initial,
+    TResult? Function(String email)? successFetchEmail,
+    TResult? Function()? successDeleteSessionData,
+    TResult? Function()? fetchingSecrets,
+    TResult? Function(List<Secret> secrets)? successFetchingSecrets,
+    TResult? Function(String msg)? failedFetchingSecrets,
+    TResult? Function(String msg)? failedDeletingSecret,
+    TResult? Function()? successDeletingSecret,
   }) {
     return initial?.call();
   }
@@ -969,14 +965,15 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_SuccecssFetchEmail value)? successFetchEmail,
-    TResult Function(_SuccessDeleteSessionData value)? successDeleteSessionData,
-    TResult Function(_FetchingSecrets value)? fetchingSecrets,
-    TResult Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
-    TResult Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
-    TResult Function(_FailedDeletingSecret value)? failedDeletingSecret,
-    TResult Function(_SuccessDeletingSecret value)? successDeletingSecret,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_SuccecssFetchEmail value)? successFetchEmail,
+    TResult? Function(_SuccessDeleteSessionData value)?
+        successDeleteSessionData,
+    TResult? Function(_FetchingSecrets value)? fetchingSecrets,
+    TResult? Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
+    TResult? Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
+    TResult? Function(_FailedDeletingSecret value)? failedDeletingSecret,
+    TResult? Function(_SuccessDeletingSecret value)? successDeletingSecret,
   }) {
     return initial?.call(this);
   }
@@ -1002,34 +999,33 @@ class _$_Initial implements _Initial {
 }
 
 abstract class _Initial implements DashboardState {
-  const factory _Initial() = _$_Initial;
+  const factory _Initial() = _$InitialImpl;
 }
 
 /// @nodoc
-abstract class _$$_SuccecssFetchEmailCopyWith<$Res> {
-  factory _$$_SuccecssFetchEmailCopyWith(_$_SuccecssFetchEmail value,
-          $Res Function(_$_SuccecssFetchEmail) then) =
-      __$$_SuccecssFetchEmailCopyWithImpl<$Res>;
+abstract class _$$SuccecssFetchEmailImplCopyWith<$Res> {
+  factory _$$SuccecssFetchEmailImplCopyWith(_$SuccecssFetchEmailImpl value,
+          $Res Function(_$SuccecssFetchEmailImpl) then) =
+      __$$SuccecssFetchEmailImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String email});
 }
 
 /// @nodoc
-class __$$_SuccecssFetchEmailCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res>
-    implements _$$_SuccecssFetchEmailCopyWith<$Res> {
-  __$$_SuccecssFetchEmailCopyWithImpl(
-      _$_SuccecssFetchEmail _value, $Res Function(_$_SuccecssFetchEmail) _then)
-      : super(_value, (v) => _then(v as _$_SuccecssFetchEmail));
+class __$$SuccecssFetchEmailImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$SuccecssFetchEmailImpl>
+    implements _$$SuccecssFetchEmailImplCopyWith<$Res> {
+  __$$SuccecssFetchEmailImplCopyWithImpl(_$SuccecssFetchEmailImpl _value,
+      $Res Function(_$SuccecssFetchEmailImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_SuccecssFetchEmail get _value => super._value as _$_SuccecssFetchEmail;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = freezed,
+    Object? email = null,
   }) {
-    return _then(_$_SuccecssFetchEmail(
-      email: email == freezed
+    return _then(_$SuccecssFetchEmailImpl(
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1039,8 +1035,8 @@ class __$$_SuccecssFetchEmailCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SuccecssFetchEmail implements _SuccecssFetchEmail {
-  const _$_SuccecssFetchEmail({required this.email});
+class _$SuccecssFetchEmailImpl implements _SuccecssFetchEmail {
+  const _$SuccecssFetchEmailImpl({required this.email});
 
   @override
   final String email;
@@ -1051,21 +1047,21 @@ class _$_SuccecssFetchEmail implements _SuccecssFetchEmail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SuccecssFetchEmail &&
-            const DeepCollectionEquality().equals(other.email, email));
+            other is _$SuccecssFetchEmailImpl &&
+            (identical(other.email, email) || other.email == email));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(email));
+  int get hashCode => Object.hash(runtimeType, email);
 
   @JsonKey(ignore: true)
   @override
-  _$$_SuccecssFetchEmailCopyWith<_$_SuccecssFetchEmail> get copyWith =>
-      __$$_SuccecssFetchEmailCopyWithImpl<_$_SuccecssFetchEmail>(
+  @pragma('vm:prefer-inline')
+  _$$SuccecssFetchEmailImplCopyWith<_$SuccecssFetchEmailImpl> get copyWith =>
+      __$$SuccecssFetchEmailImplCopyWithImpl<_$SuccecssFetchEmailImpl>(
           this, _$identity);
 
   @override
@@ -1086,14 +1082,14 @@ class _$_SuccecssFetchEmail implements _SuccecssFetchEmail {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(String email)? successFetchEmail,
-    TResult Function()? successDeleteSessionData,
-    TResult Function()? fetchingSecrets,
-    TResult Function(List<Secret> secrets)? successFetchingSecrets,
-    TResult Function(String msg)? failedFetchingSecrets,
-    TResult Function(String msg)? failedDeletingSecret,
-    TResult Function()? successDeletingSecret,
+    TResult? Function()? initial,
+    TResult? Function(String email)? successFetchEmail,
+    TResult? Function()? successDeleteSessionData,
+    TResult? Function()? fetchingSecrets,
+    TResult? Function(List<Secret> secrets)? successFetchingSecrets,
+    TResult? Function(String msg)? failedFetchingSecrets,
+    TResult? Function(String msg)? failedDeletingSecret,
+    TResult? Function()? successDeletingSecret,
   }) {
     return successFetchEmail?.call(email);
   }
@@ -1139,14 +1135,15 @@ class _$_SuccecssFetchEmail implements _SuccecssFetchEmail {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_SuccecssFetchEmail value)? successFetchEmail,
-    TResult Function(_SuccessDeleteSessionData value)? successDeleteSessionData,
-    TResult Function(_FetchingSecrets value)? fetchingSecrets,
-    TResult Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
-    TResult Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
-    TResult Function(_FailedDeletingSecret value)? failedDeletingSecret,
-    TResult Function(_SuccessDeletingSecret value)? successDeletingSecret,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_SuccecssFetchEmail value)? successFetchEmail,
+    TResult? Function(_SuccessDeleteSessionData value)?
+        successDeleteSessionData,
+    TResult? Function(_FetchingSecrets value)? fetchingSecrets,
+    TResult? Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
+    TResult? Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
+    TResult? Function(_FailedDeletingSecret value)? failedDeletingSecret,
+    TResult? Function(_SuccessDeletingSecret value)? successDeletingSecret,
   }) {
     return successFetchEmail?.call(this);
   }
@@ -1173,39 +1170,36 @@ class _$_SuccecssFetchEmail implements _SuccecssFetchEmail {
 
 abstract class _SuccecssFetchEmail implements DashboardState {
   const factory _SuccecssFetchEmail({required final String email}) =
-      _$_SuccecssFetchEmail;
+      _$SuccecssFetchEmailImpl;
 
   String get email;
   @JsonKey(ignore: true)
-  _$$_SuccecssFetchEmailCopyWith<_$_SuccecssFetchEmail> get copyWith =>
+  _$$SuccecssFetchEmailImplCopyWith<_$SuccecssFetchEmailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SuccessDeleteSessionDataCopyWith<$Res> {
-  factory _$$_SuccessDeleteSessionDataCopyWith(
-          _$_SuccessDeleteSessionData value,
-          $Res Function(_$_SuccessDeleteSessionData) then) =
-      __$$_SuccessDeleteSessionDataCopyWithImpl<$Res>;
+abstract class _$$SuccessDeleteSessionDataImplCopyWith<$Res> {
+  factory _$$SuccessDeleteSessionDataImplCopyWith(
+          _$SuccessDeleteSessionDataImpl value,
+          $Res Function(_$SuccessDeleteSessionDataImpl) then) =
+      __$$SuccessDeleteSessionDataImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_SuccessDeleteSessionDataCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res>
-    implements _$$_SuccessDeleteSessionDataCopyWith<$Res> {
-  __$$_SuccessDeleteSessionDataCopyWithImpl(_$_SuccessDeleteSessionData _value,
-      $Res Function(_$_SuccessDeleteSessionData) _then)
-      : super(_value, (v) => _then(v as _$_SuccessDeleteSessionData));
-
-  @override
-  _$_SuccessDeleteSessionData get _value =>
-      super._value as _$_SuccessDeleteSessionData;
+class __$$SuccessDeleteSessionDataImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$SuccessDeleteSessionDataImpl>
+    implements _$$SuccessDeleteSessionDataImplCopyWith<$Res> {
+  __$$SuccessDeleteSessionDataImplCopyWithImpl(
+      _$SuccessDeleteSessionDataImpl _value,
+      $Res Function(_$SuccessDeleteSessionDataImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SuccessDeleteSessionData implements _SuccessDeleteSessionData {
-  const _$_SuccessDeleteSessionData();
+class _$SuccessDeleteSessionDataImpl implements _SuccessDeleteSessionData {
+  const _$SuccessDeleteSessionDataImpl();
 
   @override
   String toString() {
@@ -1213,10 +1207,10 @@ class _$_SuccessDeleteSessionData implements _SuccessDeleteSessionData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SuccessDeleteSessionData);
+            other is _$SuccessDeleteSessionDataImpl);
   }
 
   @override
@@ -1240,14 +1234,14 @@ class _$_SuccessDeleteSessionData implements _SuccessDeleteSessionData {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(String email)? successFetchEmail,
-    TResult Function()? successDeleteSessionData,
-    TResult Function()? fetchingSecrets,
-    TResult Function(List<Secret> secrets)? successFetchingSecrets,
-    TResult Function(String msg)? failedFetchingSecrets,
-    TResult Function(String msg)? failedDeletingSecret,
-    TResult Function()? successDeletingSecret,
+    TResult? Function()? initial,
+    TResult? Function(String email)? successFetchEmail,
+    TResult? Function()? successDeleteSessionData,
+    TResult? Function()? fetchingSecrets,
+    TResult? Function(List<Secret> secrets)? successFetchingSecrets,
+    TResult? Function(String msg)? failedFetchingSecrets,
+    TResult? Function(String msg)? failedDeletingSecret,
+    TResult? Function()? successDeletingSecret,
   }) {
     return successDeleteSessionData?.call();
   }
@@ -1293,14 +1287,15 @@ class _$_SuccessDeleteSessionData implements _SuccessDeleteSessionData {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_SuccecssFetchEmail value)? successFetchEmail,
-    TResult Function(_SuccessDeleteSessionData value)? successDeleteSessionData,
-    TResult Function(_FetchingSecrets value)? fetchingSecrets,
-    TResult Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
-    TResult Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
-    TResult Function(_FailedDeletingSecret value)? failedDeletingSecret,
-    TResult Function(_SuccessDeletingSecret value)? successDeletingSecret,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_SuccecssFetchEmail value)? successFetchEmail,
+    TResult? Function(_SuccessDeleteSessionData value)?
+        successDeleteSessionData,
+    TResult? Function(_FetchingSecrets value)? fetchingSecrets,
+    TResult? Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
+    TResult? Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
+    TResult? Function(_FailedDeletingSecret value)? failedDeletingSecret,
+    TResult? Function(_SuccessDeletingSecret value)? successDeletingSecret,
   }) {
     return successDeleteSessionData?.call(this);
   }
@@ -1326,32 +1321,29 @@ class _$_SuccessDeleteSessionData implements _SuccessDeleteSessionData {
 }
 
 abstract class _SuccessDeleteSessionData implements DashboardState {
-  const factory _SuccessDeleteSessionData() = _$_SuccessDeleteSessionData;
+  const factory _SuccessDeleteSessionData() = _$SuccessDeleteSessionDataImpl;
 }
 
 /// @nodoc
-abstract class _$$_FetchingSecretsCopyWith<$Res> {
-  factory _$$_FetchingSecretsCopyWith(
-          _$_FetchingSecrets value, $Res Function(_$_FetchingSecrets) then) =
-      __$$_FetchingSecretsCopyWithImpl<$Res>;
+abstract class _$$FetchingSecretsImplCopyWith<$Res> {
+  factory _$$FetchingSecretsImplCopyWith(_$FetchingSecretsImpl value,
+          $Res Function(_$FetchingSecretsImpl) then) =
+      __$$FetchingSecretsImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_FetchingSecretsCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res>
-    implements _$$_FetchingSecretsCopyWith<$Res> {
-  __$$_FetchingSecretsCopyWithImpl(
-      _$_FetchingSecrets _value, $Res Function(_$_FetchingSecrets) _then)
-      : super(_value, (v) => _then(v as _$_FetchingSecrets));
-
-  @override
-  _$_FetchingSecrets get _value => super._value as _$_FetchingSecrets;
+class __$$FetchingSecretsImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$FetchingSecretsImpl>
+    implements _$$FetchingSecretsImplCopyWith<$Res> {
+  __$$FetchingSecretsImplCopyWithImpl(
+      _$FetchingSecretsImpl _value, $Res Function(_$FetchingSecretsImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_FetchingSecrets implements _FetchingSecrets {
-  const _$_FetchingSecrets();
+class _$FetchingSecretsImpl implements _FetchingSecrets {
+  const _$FetchingSecretsImpl();
 
   @override
   String toString() {
@@ -1359,9 +1351,9 @@ class _$_FetchingSecrets implements _FetchingSecrets {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_FetchingSecrets);
+        (other.runtimeType == runtimeType && other is _$FetchingSecretsImpl);
   }
 
   @override
@@ -1385,14 +1377,14 @@ class _$_FetchingSecrets implements _FetchingSecrets {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(String email)? successFetchEmail,
-    TResult Function()? successDeleteSessionData,
-    TResult Function()? fetchingSecrets,
-    TResult Function(List<Secret> secrets)? successFetchingSecrets,
-    TResult Function(String msg)? failedFetchingSecrets,
-    TResult Function(String msg)? failedDeletingSecret,
-    TResult Function()? successDeletingSecret,
+    TResult? Function()? initial,
+    TResult? Function(String email)? successFetchEmail,
+    TResult? Function()? successDeleteSessionData,
+    TResult? Function()? fetchingSecrets,
+    TResult? Function(List<Secret> secrets)? successFetchingSecrets,
+    TResult? Function(String msg)? failedFetchingSecrets,
+    TResult? Function(String msg)? failedDeletingSecret,
+    TResult? Function()? successDeletingSecret,
   }) {
     return fetchingSecrets?.call();
   }
@@ -1438,14 +1430,15 @@ class _$_FetchingSecrets implements _FetchingSecrets {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_SuccecssFetchEmail value)? successFetchEmail,
-    TResult Function(_SuccessDeleteSessionData value)? successDeleteSessionData,
-    TResult Function(_FetchingSecrets value)? fetchingSecrets,
-    TResult Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
-    TResult Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
-    TResult Function(_FailedDeletingSecret value)? failedDeletingSecret,
-    TResult Function(_SuccessDeletingSecret value)? successDeletingSecret,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_SuccecssFetchEmail value)? successFetchEmail,
+    TResult? Function(_SuccessDeleteSessionData value)?
+        successDeleteSessionData,
+    TResult? Function(_FetchingSecrets value)? fetchingSecrets,
+    TResult? Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
+    TResult? Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
+    TResult? Function(_FailedDeletingSecret value)? failedDeletingSecret,
+    TResult? Function(_SuccessDeletingSecret value)? successDeletingSecret,
   }) {
     return fetchingSecrets?.call(this);
   }
@@ -1471,35 +1464,35 @@ class _$_FetchingSecrets implements _FetchingSecrets {
 }
 
 abstract class _FetchingSecrets implements DashboardState {
-  const factory _FetchingSecrets() = _$_FetchingSecrets;
+  const factory _FetchingSecrets() = _$FetchingSecretsImpl;
 }
 
 /// @nodoc
-abstract class _$$_SuccessFetchingSecretsCopyWith<$Res> {
-  factory _$$_SuccessFetchingSecretsCopyWith(_$_SuccessFetchingSecrets value,
-          $Res Function(_$_SuccessFetchingSecrets) then) =
-      __$$_SuccessFetchingSecretsCopyWithImpl<$Res>;
+abstract class _$$SuccessFetchingSecretsImplCopyWith<$Res> {
+  factory _$$SuccessFetchingSecretsImplCopyWith(
+          _$SuccessFetchingSecretsImpl value,
+          $Res Function(_$SuccessFetchingSecretsImpl) then) =
+      __$$SuccessFetchingSecretsImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({List<Secret> secrets});
 }
 
 /// @nodoc
-class __$$_SuccessFetchingSecretsCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res>
-    implements _$$_SuccessFetchingSecretsCopyWith<$Res> {
-  __$$_SuccessFetchingSecretsCopyWithImpl(_$_SuccessFetchingSecrets _value,
-      $Res Function(_$_SuccessFetchingSecrets) _then)
-      : super(_value, (v) => _then(v as _$_SuccessFetchingSecrets));
+class __$$SuccessFetchingSecretsImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$SuccessFetchingSecretsImpl>
+    implements _$$SuccessFetchingSecretsImplCopyWith<$Res> {
+  __$$SuccessFetchingSecretsImplCopyWithImpl(
+      _$SuccessFetchingSecretsImpl _value,
+      $Res Function(_$SuccessFetchingSecretsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_SuccessFetchingSecrets get _value =>
-      super._value as _$_SuccessFetchingSecrets;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? secrets = freezed,
+    Object? secrets = null,
   }) {
-    return _then(_$_SuccessFetchingSecrets(
-      secrets: secrets == freezed
+    return _then(_$SuccessFetchingSecretsImpl(
+      secrets: null == secrets
           ? _value._secrets
           : secrets // ignore: cast_nullable_to_non_nullable
               as List<Secret>,
@@ -1509,13 +1502,14 @@ class __$$_SuccessFetchingSecretsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SuccessFetchingSecrets implements _SuccessFetchingSecrets {
-  const _$_SuccessFetchingSecrets({required final List<Secret> secrets})
+class _$SuccessFetchingSecretsImpl implements _SuccessFetchingSecrets {
+  const _$SuccessFetchingSecretsImpl({required final List<Secret> secrets})
       : _secrets = secrets;
 
   final List<Secret> _secrets;
   @override
   List<Secret> get secrets {
+    if (_secrets is EqualUnmodifiableListView) return _secrets;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_secrets);
   }
@@ -1526,10 +1520,10 @@ class _$_SuccessFetchingSecrets implements _SuccessFetchingSecrets {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SuccessFetchingSecrets &&
+            other is _$SuccessFetchingSecretsImpl &&
             const DeepCollectionEquality().equals(other._secrets, _secrets));
   }
 
@@ -1539,9 +1533,10 @@ class _$_SuccessFetchingSecrets implements _SuccessFetchingSecrets {
 
   @JsonKey(ignore: true)
   @override
-  _$$_SuccessFetchingSecretsCopyWith<_$_SuccessFetchingSecrets> get copyWith =>
-      __$$_SuccessFetchingSecretsCopyWithImpl<_$_SuccessFetchingSecrets>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$SuccessFetchingSecretsImplCopyWith<_$SuccessFetchingSecretsImpl>
+      get copyWith => __$$SuccessFetchingSecretsImplCopyWithImpl<
+          _$SuccessFetchingSecretsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1561,14 +1556,14 @@ class _$_SuccessFetchingSecrets implements _SuccessFetchingSecrets {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(String email)? successFetchEmail,
-    TResult Function()? successDeleteSessionData,
-    TResult Function()? fetchingSecrets,
-    TResult Function(List<Secret> secrets)? successFetchingSecrets,
-    TResult Function(String msg)? failedFetchingSecrets,
-    TResult Function(String msg)? failedDeletingSecret,
-    TResult Function()? successDeletingSecret,
+    TResult? Function()? initial,
+    TResult? Function(String email)? successFetchEmail,
+    TResult? Function()? successDeleteSessionData,
+    TResult? Function()? fetchingSecrets,
+    TResult? Function(List<Secret> secrets)? successFetchingSecrets,
+    TResult? Function(String msg)? failedFetchingSecrets,
+    TResult? Function(String msg)? failedDeletingSecret,
+    TResult? Function()? successDeletingSecret,
   }) {
     return successFetchingSecrets?.call(secrets);
   }
@@ -1614,14 +1609,15 @@ class _$_SuccessFetchingSecrets implements _SuccessFetchingSecrets {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_SuccecssFetchEmail value)? successFetchEmail,
-    TResult Function(_SuccessDeleteSessionData value)? successDeleteSessionData,
-    TResult Function(_FetchingSecrets value)? fetchingSecrets,
-    TResult Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
-    TResult Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
-    TResult Function(_FailedDeletingSecret value)? failedDeletingSecret,
-    TResult Function(_SuccessDeletingSecret value)? successDeletingSecret,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_SuccecssFetchEmail value)? successFetchEmail,
+    TResult? Function(_SuccessDeleteSessionData value)?
+        successDeleteSessionData,
+    TResult? Function(_FetchingSecrets value)? fetchingSecrets,
+    TResult? Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
+    TResult? Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
+    TResult? Function(_FailedDeletingSecret value)? failedDeletingSecret,
+    TResult? Function(_SuccessDeletingSecret value)? successDeletingSecret,
   }) {
     return successFetchingSecrets?.call(this);
   }
@@ -1648,40 +1644,39 @@ class _$_SuccessFetchingSecrets implements _SuccessFetchingSecrets {
 
 abstract class _SuccessFetchingSecrets implements DashboardState {
   const factory _SuccessFetchingSecrets({required final List<Secret> secrets}) =
-      _$_SuccessFetchingSecrets;
+      _$SuccessFetchingSecretsImpl;
 
   List<Secret> get secrets;
   @JsonKey(ignore: true)
-  _$$_SuccessFetchingSecretsCopyWith<_$_SuccessFetchingSecrets> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SuccessFetchingSecretsImplCopyWith<_$SuccessFetchingSecretsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FailedFetchingSecretsCopyWith<$Res> {
-  factory _$$_FailedFetchingSecretsCopyWith(_$_FailedFetchingSecrets value,
-          $Res Function(_$_FailedFetchingSecrets) then) =
-      __$$_FailedFetchingSecretsCopyWithImpl<$Res>;
+abstract class _$$FailedFetchingSecretsImplCopyWith<$Res> {
+  factory _$$FailedFetchingSecretsImplCopyWith(
+          _$FailedFetchingSecretsImpl value,
+          $Res Function(_$FailedFetchingSecretsImpl) then) =
+      __$$FailedFetchingSecretsImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String msg});
 }
 
 /// @nodoc
-class __$$_FailedFetchingSecretsCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res>
-    implements _$$_FailedFetchingSecretsCopyWith<$Res> {
-  __$$_FailedFetchingSecretsCopyWithImpl(_$_FailedFetchingSecrets _value,
-      $Res Function(_$_FailedFetchingSecrets) _then)
-      : super(_value, (v) => _then(v as _$_FailedFetchingSecrets));
+class __$$FailedFetchingSecretsImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$FailedFetchingSecretsImpl>
+    implements _$$FailedFetchingSecretsImplCopyWith<$Res> {
+  __$$FailedFetchingSecretsImplCopyWithImpl(_$FailedFetchingSecretsImpl _value,
+      $Res Function(_$FailedFetchingSecretsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_FailedFetchingSecrets get _value =>
-      super._value as _$_FailedFetchingSecrets;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? msg = freezed,
+    Object? msg = null,
   }) {
-    return _then(_$_FailedFetchingSecrets(
-      msg: msg == freezed
+    return _then(_$FailedFetchingSecretsImpl(
+      msg: null == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1691,8 +1686,8 @@ class __$$_FailedFetchingSecretsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FailedFetchingSecrets implements _FailedFetchingSecrets {
-  const _$_FailedFetchingSecrets({required this.msg});
+class _$FailedFetchingSecretsImpl implements _FailedFetchingSecrets {
+  const _$FailedFetchingSecretsImpl({required this.msg});
 
   @override
   final String msg;
@@ -1703,22 +1698,22 @@ class _$_FailedFetchingSecrets implements _FailedFetchingSecrets {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FailedFetchingSecrets &&
-            const DeepCollectionEquality().equals(other.msg, msg));
+            other is _$FailedFetchingSecretsImpl &&
+            (identical(other.msg, msg) || other.msg == msg));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(msg));
+  int get hashCode => Object.hash(runtimeType, msg);
 
   @JsonKey(ignore: true)
   @override
-  _$$_FailedFetchingSecretsCopyWith<_$_FailedFetchingSecrets> get copyWith =>
-      __$$_FailedFetchingSecretsCopyWithImpl<_$_FailedFetchingSecrets>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$FailedFetchingSecretsImplCopyWith<_$FailedFetchingSecretsImpl>
+      get copyWith => __$$FailedFetchingSecretsImplCopyWithImpl<
+          _$FailedFetchingSecretsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1738,14 +1733,14 @@ class _$_FailedFetchingSecrets implements _FailedFetchingSecrets {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(String email)? successFetchEmail,
-    TResult Function()? successDeleteSessionData,
-    TResult Function()? fetchingSecrets,
-    TResult Function(List<Secret> secrets)? successFetchingSecrets,
-    TResult Function(String msg)? failedFetchingSecrets,
-    TResult Function(String msg)? failedDeletingSecret,
-    TResult Function()? successDeletingSecret,
+    TResult? Function()? initial,
+    TResult? Function(String email)? successFetchEmail,
+    TResult? Function()? successDeleteSessionData,
+    TResult? Function()? fetchingSecrets,
+    TResult? Function(List<Secret> secrets)? successFetchingSecrets,
+    TResult? Function(String msg)? failedFetchingSecrets,
+    TResult? Function(String msg)? failedDeletingSecret,
+    TResult? Function()? successDeletingSecret,
   }) {
     return failedFetchingSecrets?.call(msg);
   }
@@ -1791,14 +1786,15 @@ class _$_FailedFetchingSecrets implements _FailedFetchingSecrets {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_SuccecssFetchEmail value)? successFetchEmail,
-    TResult Function(_SuccessDeleteSessionData value)? successDeleteSessionData,
-    TResult Function(_FetchingSecrets value)? fetchingSecrets,
-    TResult Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
-    TResult Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
-    TResult Function(_FailedDeletingSecret value)? failedDeletingSecret,
-    TResult Function(_SuccessDeletingSecret value)? successDeletingSecret,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_SuccecssFetchEmail value)? successFetchEmail,
+    TResult? Function(_SuccessDeleteSessionData value)?
+        successDeleteSessionData,
+    TResult? Function(_FetchingSecrets value)? fetchingSecrets,
+    TResult? Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
+    TResult? Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
+    TResult? Function(_FailedDeletingSecret value)? failedDeletingSecret,
+    TResult? Function(_SuccessDeletingSecret value)? successDeletingSecret,
   }) {
     return failedFetchingSecrets?.call(this);
   }
@@ -1825,39 +1821,38 @@ class _$_FailedFetchingSecrets implements _FailedFetchingSecrets {
 
 abstract class _FailedFetchingSecrets implements DashboardState {
   const factory _FailedFetchingSecrets({required final String msg}) =
-      _$_FailedFetchingSecrets;
+      _$FailedFetchingSecretsImpl;
 
   String get msg;
   @JsonKey(ignore: true)
-  _$$_FailedFetchingSecretsCopyWith<_$_FailedFetchingSecrets> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$FailedFetchingSecretsImplCopyWith<_$FailedFetchingSecretsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FailedDeletingSecretCopyWith<$Res> {
-  factory _$$_FailedDeletingSecretCopyWith(_$_FailedDeletingSecret value,
-          $Res Function(_$_FailedDeletingSecret) then) =
-      __$$_FailedDeletingSecretCopyWithImpl<$Res>;
+abstract class _$$FailedDeletingSecretImplCopyWith<$Res> {
+  factory _$$FailedDeletingSecretImplCopyWith(_$FailedDeletingSecretImpl value,
+          $Res Function(_$FailedDeletingSecretImpl) then) =
+      __$$FailedDeletingSecretImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String msg});
 }
 
 /// @nodoc
-class __$$_FailedDeletingSecretCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res>
-    implements _$$_FailedDeletingSecretCopyWith<$Res> {
-  __$$_FailedDeletingSecretCopyWithImpl(_$_FailedDeletingSecret _value,
-      $Res Function(_$_FailedDeletingSecret) _then)
-      : super(_value, (v) => _then(v as _$_FailedDeletingSecret));
+class __$$FailedDeletingSecretImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$FailedDeletingSecretImpl>
+    implements _$$FailedDeletingSecretImplCopyWith<$Res> {
+  __$$FailedDeletingSecretImplCopyWithImpl(_$FailedDeletingSecretImpl _value,
+      $Res Function(_$FailedDeletingSecretImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_FailedDeletingSecret get _value => super._value as _$_FailedDeletingSecret;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? msg = freezed,
+    Object? msg = null,
   }) {
-    return _then(_$_FailedDeletingSecret(
-      msg: msg == freezed
+    return _then(_$FailedDeletingSecretImpl(
+      msg: null == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1867,8 +1862,8 @@ class __$$_FailedDeletingSecretCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FailedDeletingSecret implements _FailedDeletingSecret {
-  const _$_FailedDeletingSecret({required this.msg});
+class _$FailedDeletingSecretImpl implements _FailedDeletingSecret {
+  const _$FailedDeletingSecretImpl({required this.msg});
 
   @override
   final String msg;
@@ -1879,22 +1874,23 @@ class _$_FailedDeletingSecret implements _FailedDeletingSecret {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FailedDeletingSecret &&
-            const DeepCollectionEquality().equals(other.msg, msg));
+            other is _$FailedDeletingSecretImpl &&
+            (identical(other.msg, msg) || other.msg == msg));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(msg));
+  int get hashCode => Object.hash(runtimeType, msg);
 
   @JsonKey(ignore: true)
   @override
-  _$$_FailedDeletingSecretCopyWith<_$_FailedDeletingSecret> get copyWith =>
-      __$$_FailedDeletingSecretCopyWithImpl<_$_FailedDeletingSecret>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$FailedDeletingSecretImplCopyWith<_$FailedDeletingSecretImpl>
+      get copyWith =>
+          __$$FailedDeletingSecretImplCopyWithImpl<_$FailedDeletingSecretImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1914,14 +1910,14 @@ class _$_FailedDeletingSecret implements _FailedDeletingSecret {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(String email)? successFetchEmail,
-    TResult Function()? successDeleteSessionData,
-    TResult Function()? fetchingSecrets,
-    TResult Function(List<Secret> secrets)? successFetchingSecrets,
-    TResult Function(String msg)? failedFetchingSecrets,
-    TResult Function(String msg)? failedDeletingSecret,
-    TResult Function()? successDeletingSecret,
+    TResult? Function()? initial,
+    TResult? Function(String email)? successFetchEmail,
+    TResult? Function()? successDeleteSessionData,
+    TResult? Function()? fetchingSecrets,
+    TResult? Function(List<Secret> secrets)? successFetchingSecrets,
+    TResult? Function(String msg)? failedFetchingSecrets,
+    TResult? Function(String msg)? failedDeletingSecret,
+    TResult? Function()? successDeletingSecret,
   }) {
     return failedDeletingSecret?.call(msg);
   }
@@ -1967,14 +1963,15 @@ class _$_FailedDeletingSecret implements _FailedDeletingSecret {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_SuccecssFetchEmail value)? successFetchEmail,
-    TResult Function(_SuccessDeleteSessionData value)? successDeleteSessionData,
-    TResult Function(_FetchingSecrets value)? fetchingSecrets,
-    TResult Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
-    TResult Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
-    TResult Function(_FailedDeletingSecret value)? failedDeletingSecret,
-    TResult Function(_SuccessDeletingSecret value)? successDeletingSecret,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_SuccecssFetchEmail value)? successFetchEmail,
+    TResult? Function(_SuccessDeleteSessionData value)?
+        successDeleteSessionData,
+    TResult? Function(_FetchingSecrets value)? fetchingSecrets,
+    TResult? Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
+    TResult? Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
+    TResult? Function(_FailedDeletingSecret value)? failedDeletingSecret,
+    TResult? Function(_SuccessDeletingSecret value)? successDeletingSecret,
   }) {
     return failedDeletingSecret?.call(this);
   }
@@ -2001,38 +1998,35 @@ class _$_FailedDeletingSecret implements _FailedDeletingSecret {
 
 abstract class _FailedDeletingSecret implements DashboardState {
   const factory _FailedDeletingSecret({required final String msg}) =
-      _$_FailedDeletingSecret;
+      _$FailedDeletingSecretImpl;
 
   String get msg;
   @JsonKey(ignore: true)
-  _$$_FailedDeletingSecretCopyWith<_$_FailedDeletingSecret> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$FailedDeletingSecretImplCopyWith<_$FailedDeletingSecretImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SuccessDeletingSecretCopyWith<$Res> {
-  factory _$$_SuccessDeletingSecretCopyWith(_$_SuccessDeletingSecret value,
-          $Res Function(_$_SuccessDeletingSecret) then) =
-      __$$_SuccessDeletingSecretCopyWithImpl<$Res>;
+abstract class _$$SuccessDeletingSecretImplCopyWith<$Res> {
+  factory _$$SuccessDeletingSecretImplCopyWith(
+          _$SuccessDeletingSecretImpl value,
+          $Res Function(_$SuccessDeletingSecretImpl) then) =
+      __$$SuccessDeletingSecretImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_SuccessDeletingSecretCopyWithImpl<$Res>
-    extends _$DashboardStateCopyWithImpl<$Res>
-    implements _$$_SuccessDeletingSecretCopyWith<$Res> {
-  __$$_SuccessDeletingSecretCopyWithImpl(_$_SuccessDeletingSecret _value,
-      $Res Function(_$_SuccessDeletingSecret) _then)
-      : super(_value, (v) => _then(v as _$_SuccessDeletingSecret));
-
-  @override
-  _$_SuccessDeletingSecret get _value =>
-      super._value as _$_SuccessDeletingSecret;
+class __$$SuccessDeletingSecretImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res, _$SuccessDeletingSecretImpl>
+    implements _$$SuccessDeletingSecretImplCopyWith<$Res> {
+  __$$SuccessDeletingSecretImplCopyWithImpl(_$SuccessDeletingSecretImpl _value,
+      $Res Function(_$SuccessDeletingSecretImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SuccessDeletingSecret implements _SuccessDeletingSecret {
-  const _$_SuccessDeletingSecret();
+class _$SuccessDeletingSecretImpl implements _SuccessDeletingSecret {
+  const _$SuccessDeletingSecretImpl();
 
   @override
   String toString() {
@@ -2040,9 +2034,10 @@ class _$_SuccessDeletingSecret implements _SuccessDeletingSecret {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_SuccessDeletingSecret);
+        (other.runtimeType == runtimeType &&
+            other is _$SuccessDeletingSecretImpl);
   }
 
   @override
@@ -2066,14 +2061,14 @@ class _$_SuccessDeletingSecret implements _SuccessDeletingSecret {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(String email)? successFetchEmail,
-    TResult Function()? successDeleteSessionData,
-    TResult Function()? fetchingSecrets,
-    TResult Function(List<Secret> secrets)? successFetchingSecrets,
-    TResult Function(String msg)? failedFetchingSecrets,
-    TResult Function(String msg)? failedDeletingSecret,
-    TResult Function()? successDeletingSecret,
+    TResult? Function()? initial,
+    TResult? Function(String email)? successFetchEmail,
+    TResult? Function()? successDeleteSessionData,
+    TResult? Function()? fetchingSecrets,
+    TResult? Function(List<Secret> secrets)? successFetchingSecrets,
+    TResult? Function(String msg)? failedFetchingSecrets,
+    TResult? Function(String msg)? failedDeletingSecret,
+    TResult? Function()? successDeletingSecret,
   }) {
     return successDeletingSecret?.call();
   }
@@ -2119,14 +2114,15 @@ class _$_SuccessDeletingSecret implements _SuccessDeletingSecret {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_SuccecssFetchEmail value)? successFetchEmail,
-    TResult Function(_SuccessDeleteSessionData value)? successDeleteSessionData,
-    TResult Function(_FetchingSecrets value)? fetchingSecrets,
-    TResult Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
-    TResult Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
-    TResult Function(_FailedDeletingSecret value)? failedDeletingSecret,
-    TResult Function(_SuccessDeletingSecret value)? successDeletingSecret,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_SuccecssFetchEmail value)? successFetchEmail,
+    TResult? Function(_SuccessDeleteSessionData value)?
+        successDeleteSessionData,
+    TResult? Function(_FetchingSecrets value)? fetchingSecrets,
+    TResult? Function(_SuccessFetchingSecrets value)? successFetchingSecrets,
+    TResult? Function(_FailedFetchingSecrets value)? failedFetchingSecrets,
+    TResult? Function(_FailedDeletingSecret value)? failedDeletingSecret,
+    TResult? Function(_SuccessDeletingSecret value)? successDeletingSecret,
   }) {
     return successDeletingSecret?.call(this);
   }
@@ -2152,5 +2148,5 @@ class _$_SuccessDeletingSecret implements _SuccessDeletingSecret {
 }
 
 abstract class _SuccessDeletingSecret implements DashboardState {
-  const factory _SuccessDeletingSecret() = _$_SuccessDeletingSecret;
+  const factory _SuccessDeletingSecret() = _$SuccessDeletingSecretImpl;
 }

@@ -1,16 +1,16 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:secureu_mobile/repos/account_repository.dart';
-import 'package:secureu_mobile/utils/cryptography.dart';
+import 'package:passworld/repos/account_repository.dart';
+import 'package:passworld/utils/cryptography.dart';
 
 part 'register_event.dart';
 part 'register_state.dart';
 part 'register_bloc.freezed.dart';
 
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
-  final AccountRepository _accountRepo;
+  final AccountRepo _accountRepo;
 
-  RegisterBloc({required AccountRepository accountRepo})
+  RegisterBloc({required AccountRepo accountRepo})
       : _accountRepo = accountRepo,
         super(const _Initial()) {
     on<RegisterEvent>((event, emit) async {
@@ -27,7 +27,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
           if (exists == null) {
             return emit(
               const RegisterState.failedSubmittingForm(
-                'Gagal terhubung ke database',
+                'Veritabanına bağlanılamadı',
               ),
             );
           }
@@ -35,12 +35,12 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
           if (exists) {
             return emit(
               const RegisterState.failedSubmittingForm(
-                'Email tidak dapat digunakan',
+                'E-posta kullanılamıyor',
               ),
             );
           }
 
-          // insert account ke user
+          // kullanıcıya hesap ekle
           final masterPassword = password;
 
           final stretchedAccountPassword = await Cryptography.forRegister(
@@ -51,7 +51,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
           if (stretchedAccountPassword == null) {
             return emit(
               const RegisterState.failedSubmittingForm(
-                'Kesalahan saat membuat akun',
+                'Hesap oluşturulurken hata oluştu',
               ),
             );
           }
@@ -62,7 +62,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
           if (createdAccountId == null) {
             return emit(
               const RegisterState.failedSubmittingForm(
-                'Kesalahan saat membuat akun',
+                'Hesap oluşturulurken hata oluştu',
               ),
             );
           }

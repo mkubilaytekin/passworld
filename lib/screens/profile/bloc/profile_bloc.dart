@@ -5,18 +5,18 @@ import 'package:passworld/config/hive_constants.dart';
 import 'package:passworld/repos/models/secret_model/secret_model.dart';
 import 'package:passworld/repos/secret_repository.dart';
 
-part 'dashboard_event.dart';
-part 'dashboard_state.dart';
-part 'dashboard_bloc.freezed.dart';
+part 'profile_event.dart';
+part 'profile_state.dart';
+part 'profile_bloc.freezed.dart';
 
-class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
+class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   final SecretRepository _secretRepo;
 
-  DashboardBloc({
+  ProfileBloc({
     required SecretRepository secretRepo,
   })  : _secretRepo = secretRepo,
         super(const _Initial()) {
-    on<DashboardEvent>((event, emit) async {
+    on<ProfileEvent>((event, emit) async {
       await event.whenOrNull(
         started: () async {
           print('started');
@@ -27,9 +27,9 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
             defaultValue: 'No email',
           );
 
-          emit(DashboardState.successFetchEmail(email: userEmail!));
+          emit(ProfileState.successFetchEmail(email: userEmail!));
 
-          add(const DashboardEvent.fetchSecretList());
+          add(const ProfileEvent.fetchSecretList());
         },
         fetchSecretList: () async {
           print('fetch secret list');
@@ -39,7 +39,7 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
 
           if (userId == null) {
             return emit(
-              const DashboardState.failedFetchingSecrets(
+              const ProfileState.failedFetchingSecrets(
                   msg: 'Kullanıcı kimliği okunurken hata oluştu'),
             );
           }
@@ -47,15 +47,15 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
           final secrets = await _secretRepo.getSecretsByUserId(userId);
 
           if (secrets == null) {
-            emit(const DashboardState.successFetchingSecrets(secrets: []));
+            emit(const ProfileState.successFetchingSecrets(secrets: []));
 
             return emit(
-              const DashboardState.failedFetchingSecrets(
+              const ProfileState.failedFetchingSecrets(
                   msg: 'Gizli bilgiler alınırken hata oluştu'),
             );
           }
 
-          emit(DashboardState.successFetchingSecrets(secrets: secrets));
+          emit(ProfileState.successFetchingSecrets(secrets: secrets));
         },
         setSecretId: (secretId) async {
           final appSessionBox = Hive.box<String>(HiveConstants.appsession);
@@ -73,13 +73,13 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
 
           if (deletedId == null) {
             return emit(
-              const DashboardState.failedDeletingSecret(
+              const ProfileState.failedDeletingSecret(
                   msg: 'Gizli anahtar silinirken hata oluştu'),
             );
           }
 
-          add(const DashboardEvent.fetchSecretList());
-          return emit(const DashboardState.successDeletingSecret());
+          add(const ProfileEvent.fetchSecretList());
+          return emit(const ProfileState.successDeletingSecret());
         },
         deleteSessionData: () async {
           final appSessionBox = Hive.box<String>(HiveConstants.appsession);
@@ -91,7 +91,7 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
             HiveConstants.secretId,
           ]);
 
-          emit(const DashboardState.successDeleteSessionData());
+          emit(const ProfileState.successDeleteSessionData());
         },
       );
     });

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:secureu_mobile/config/routes.dart';
-import 'package:secureu_mobile/repos/models/secret_model/secret_model.dart';
-import 'package:secureu_mobile/screens/dashboard/dashboard.dart';
+import 'package:passworld/config/routes.dart';
+import 'package:passworld/repos/models/secret_model/secret_model.dart';
+import 'package:passworld/screens/dashboard/dashboard.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -32,13 +32,13 @@ class DashboardScreen extends StatelessWidget {
           successDeletingSecret: () =>
               ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
-              content: Text('Berhasil menghapus data'),
+              content: Text('Veriler başarıyla silindi'),
               backgroundColor: Colors.green,
             ),
           ),
           successDeleteSessionData: () => Navigator.pushReplacementNamed(
             context,
-            SecureURoutes.login,
+            PassworldRoutes.login,
           ),
         );
       },
@@ -51,7 +51,7 @@ class DashboardScreen extends StatelessWidget {
           backgroundColor: Colors.black,
           child: const Icon(Icons.add, color: Colors.white),
           onPressed: () {
-            Navigator.pushNamed(context, SecureURoutes.createSecret);
+            Navigator.pushNamed(context, PassworldRoutes.createSecret);
           },
         ),
       ),
@@ -65,10 +65,18 @@ class DashboardScreen extends StatelessWidget {
       leading: null,
       centerTitle: false,
       title: BlocBuilder<DashboardBloc, DashboardState>(
-        builder: (context, state) => Text(
-          state.maybeMap(
-            orElse: () => 'Fetching Email...',
-            successFetchEmail: (value) => value.email,
+        builder: (context, state) => GestureDetector(
+          onTap: () => Navigator.pushNamed(context, PassworldRoutes.profile),
+          child: CircleAvatar(
+            radius: 80,
+            backgroundColor: Colors.black,
+            child: Text(
+              style: const TextStyle(color: Colors.white, fontSize: 18),
+              state.maybeMap(
+                orElse: () => 'Kullanıcı yükleniyor...',
+                successFetchEmail: (value) => value.email.split("@")[0],
+              ),
+            ),
           ),
         ),
         buildWhen: (previous, current) => current.maybeMap(
@@ -114,7 +122,7 @@ class DashboardScreen extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      'Anda tidak mempunyai rahasia.',
+                      'Hiç gizli bilgin yok.',
                       style: TextStyle(
                         color: Colors.white54,
                         fontSize: 17.0,
@@ -123,7 +131,7 @@ class DashboardScreen extends StatelessWidget {
                   ),
                   Center(
                     child: Text(
-                      'Silahkan Buat Rahasia Baru.',
+                      'Yeni Bir Gizli Bilgi Oluşturun.',
                       style: TextStyle(
                         color: Colors.white54,
                         fontSize: 17.0,
@@ -142,36 +150,53 @@ class DashboardScreen extends StatelessWidget {
                   final strDate =
                       '${secret.updated!.day}/${secret.updated!.month}/${secret.updated!.year}';
 
-                  return ListTile(
-                    onTap: () {
-                      print(secret.name);
-                      BlocProvider.of<DashboardBloc>(context).add(
-                        DashboardEvent.setSecretId(secretId: secret.id),
-                      );
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 5),
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: ListTile(
+                        onTap: () {
+                          print(secret.name);
+                          BlocProvider.of<DashboardBloc>(context).add(
+                            DashboardEvent.setSecretId(secretId: secret.id),
+                          );
 
-                      Navigator.pushNamed(context, SecureURoutes.viewSecret);
-                    },
-                    title: Text(
-                      secret.name,
-                      style: const TextStyle(
-                        color: Colors.white70,
-                      ),
-                    ),
-                    subtitle: Text(
-                      'Diupdate $strDate',
-                      style: const TextStyle(
-                        color: Colors.white54,
-                      ),
-                    ),
-                    trailing: IconButton(
-                      onPressed: () {
-                        BlocProvider.of<DashboardBloc>(context).add(
-                          DashboardEvent.deleteSecret(secretId: secret.id),
-                        );
-                      },
-                      icon: const Icon(
-                        Icons.delete_outline,
-                        color: Colors.red,
+                          Navigator.pushNamed(context, PassworldRoutes.viewSecret);
+                        },
+                        title: Align(
+                          alignment: Alignment.topLeft,
+                          child: CircleAvatar(
+                            backgroundColor: const Color.fromARGB(144, 26, 55, 108),
+                            radius: 35,
+                            child: Text(
+                              secret.name,
+                              style: const TextStyle(
+                                color: Colors.white70,
+                              ),
+                            ),
+                          ),
+                        ),
+                        subtitle: Text(
+                          'Güncellenmiş $strDate',
+                          style: const TextStyle(
+                            color: Colors.white54,
+                          ),
+                        ),
+                        trailing: IconButton(
+                          onPressed: () {
+                            BlocProvider.of<DashboardBloc>(context).add(
+                              DashboardEvent.deleteSecret(secretId: secret.id),
+                            );
+                          },
+                          icon: const Icon(
+                            Icons.delete_outline,
+                            color: Colors.red,
+                          ),
+                        ),
                       ),
                     ),
                   );

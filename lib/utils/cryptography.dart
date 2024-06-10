@@ -7,26 +7,26 @@ class Cryptography {
     required String keyString,
     required String saltString,
   }) async {
-    /// Kodekan untai master password dan email kedalam kode UTF-8
+    /// Ana şifreyi ve e-posta dizelerini UTF-8 koduna kodlayın
     final utf8MasterPassword = utf8.encode(keyString);
     final utf8Email = utf8.encode(saltString);
 
-    /// jadikan untai master password menjadi secretKey
+    /// ana şifre dizesini bir secretKey yapın
     final masterPasswordKey = SecretKey(utf8MasterPassword);
 
-    /// Definisikan algoritma PBKDF2 dengan menggunakan
-    /// Pseduorandom Function HMAC-SHA256 dengan iterasi
-    /// sebanyak 100000 kali, yang menghasilkan array 32 byte
+    /// PBKDF2 algoritmasını kullanarak tanımlayın
+    /// Yinelemeli Pseduorandom Fonksiyonu HMAC-SHA256
+    /// 100000 kez, bu da 32 baytlık bir diziyle sonuçlanır
     final pbkdf2Algorithm = Pbkdf2(
       macAlgorithm: Hmac.sha256(),
       iterations: 100000,
       bits: 256,
     );
 
-    // Turunkan master password menggunakan algoritma PBKDF2
-    // yang telah didefinisikan, dengan salt berupa email.
-    // Nilai dari key ini akan menjadi kunci enkripsi data
-    // akun pengguna.
+    // PBKDF2 algoritmasını kullanarak ana şifreyi türetelim
+    // e-posta şeklinde salt ile tanımlanmış.
+    // Bu anahtarın değeri veri şifreleme anahtarı olacaktır
+    // Kullanıcı hesabı.
     final masterKey = await pbkdf2Algorithm.deriveKey(
       secretKey: masterPasswordKey,
       nonce: utf8Email,
@@ -41,19 +41,19 @@ class Cryptography {
   }) async {
     final utf8Email = utf8.encode(saltString);
 
-    /// Definisikan algoritma PBKDF2 dengan menggunakan
-    /// Pseduorandom Function HMAC-SHA256 dengan iterasi
-    /// sebanyak 100000 kali, yang menghasilkan array 32 byte
+    /// PBKDF2 algoritmasını kullanarak tanımlayın
+    /// Yinelemeli Pseduorandom Fonksiyonu HMAC-SHA256
+    /// 100000 kez, bu da 32 baytlık bir diziyle sonuçlanır
     final pbkdf2Algorithm = Pbkdf2(
       macAlgorithm: Hmac.sha256(),
       iterations: 100000,
       bits: 256,
     );
 
-    // Turunkan master password menggunakan algoritma PBKDF2
-    // yang telah didefinisikan, dengan salt berupa email.
-    // Nilai dari key ini akan menjadi kunci enkripsi data
-    // akun pengguna.
+    // PBKDF2 algoritmasını kullanarak ana şifreyi türetelim
+    // e-posta şeklinde salt ile tanımlanmış.
+    // Bu anahtarın değeri veri şifreleme anahtarı olacaktır
+    // Kullanıcı hesabı.
     final masterKey = await pbkdf2Algorithm.deriveKey(
       secretKey: key,
       nonce: utf8Email,
@@ -69,19 +69,19 @@ class Cryptography {
 
       return base64String;
     } catch (e) {
-      print('Gagal mengkonversi kunci ke string base64');
+      print('Anahtar base64 dizesine dönüştürülemedi');
 
       return null;
     }
   }
 
-  /// untuk tujuan pendaftaran akun baru
+  /// yeni bir hesap kaydetmek amacıyla
   static Future<String?> forRegister({
     required String masterPassword,
     required String email,
   }) async {
-    /// Turunkan master password dengan algoritma PBKDF2,
-    /// menghasilkan master key
+    /// PBKDF2 algoritması ile ana şifreyi türetelim,
+    /// ana anahtarı oluştur
     final masterKey = await deriveStringWithPBKDF2(
       keyString: masterPassword,
       saltString: email,
@@ -91,7 +91,7 @@ class Cryptography {
       return null;
     }
 
-    /// Turunkan lagi master key menggunakan algoritma PBKDF2
+    /// PBKDF2 algoritmasını kullanarak ana anahtarı yeniden türetin
     final stretchedMasterKey = await deriveKeyWithPBKDF2(
       key: masterKey,
       saltString: email,
@@ -101,7 +101,7 @@ class Cryptography {
       return null;
     }
 
-    /// kodekan byte [stretchedMasterKey] kedalam bentuk base64
+    /// [stretchedMasterKey] baytlarını base64 formuna kodlayın
     final bytes = await stretchedMasterKey.extractBytes();
     final base64Bytes = base64.encode(bytes);
 
@@ -139,7 +139,7 @@ class Cryptography {
 
       return base64Encoded;
     } catch (e) {
-      print('Gagal mengenkripsi untai');
+      print('Dize şifrelenemedi');
       print(e);
 
       return null;
@@ -180,7 +180,7 @@ class Cryptography {
 
       return utf8.decode(decrypted);
     } catch (e) {
-      print('Gagal mendekripsi data');
+      print('Verilerin şifresi çözülemedi');
 
       return null;
     }

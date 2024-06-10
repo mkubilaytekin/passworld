@@ -1,18 +1,18 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hive/hive.dart';
-import 'package:secureu_mobile/config/hive_constants.dart';
-import 'package:secureu_mobile/repos/account_repository.dart';
-import 'package:secureu_mobile/utils/cryptography.dart';
+import 'package:passworld/config/hive_constants.dart';
+import 'package:passworld/repos/account_repository.dart';
+import 'package:passworld/utils/cryptography.dart';
 
 part 'login_event.dart';
 part 'login_state.dart';
 part 'login_bloc.freezed.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  final AccountRepository _accountRepo;
+  final AccountRepo _accountRepo;
 
-  LoginBloc({required AccountRepository accountRepo})
+  LoginBloc({required AccountRepo accountRepo})
       : _accountRepo = accountRepo,
         super(const _Initial()) {
     on<LoginEvent>((event, emit) async {
@@ -23,16 +23,16 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         submitLogin: (email, password) async {
           emit(const LoginState.submittingLogin());
 
-          /// get matched account
+          /// eşleşen hesabı al
           final account = await _accountRepo.getAccountByEmail(email);
 
           if (account == null) {
-            return emit(const LoginState.failedLogin('Akun tidak ditemukan'));
+            return emit(const LoginState.failedLogin('Hesap bulunamadı'));
           }
 
           final derivedPasswordFromDB = account.password;
 
-          /// turunkan master password menggunakan algoritma PBKDF2
+          /// PBKDF2 algoritmasını kullanarak ana şifreyi türetin
           final pbkdf2DerivedKey = await Cryptography.deriveStringWithPBKDF2(
             keyString: password,
             saltString: email,
@@ -40,14 +40,14 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
           if (pbkdf2DerivedKey == null) {
             print(
-                'kesalahan saat menurunkan master password menggunakan PBKDF2 - stage 1');
+                'PBKDF2 - aşama 1 kullanılarak ana şifre türetilirken hata oluştu');
 
             return emit(
-              const LoginState.failedLogin('Kesalahan saat memproses password'),
+              const LoginState.failedLogin('Şifre işlenirken hata oluştu'),
             );
           }
 
-          /// turunkan lagi master key menggunakan algoritma PBKDF2
+          /// PBKDF2 algoritmasını kullanarak ana anahtarı tekrar türetin
           final pbkdf2DerivedKey2 = await Cryptography.deriveKeyWithPBKDF2(
             key: pbkdf2DerivedKey,
             saltString: email,
@@ -55,36 +55,36 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
           if (pbkdf2DerivedKey2 == null) {
             print(
-                'kesalahan saat menurunkan master key menggunakan PBKDF2 - stage 2');
+                'PBKDF2 - aşama 2\'yi kullanarak ana anahtarı türetirken hata oluştu');
 
             return emit(
-              const LoginState.failedLogin('Kesalahan saat memproses password'),
+              const LoginState.failedLogin('Şifre işlenirken hata oluştu'),
             );
           }
 
-          /// convert PBKDF2 derived key kedalam format base64
+          /// PBKDF2'den türetilmiş anahtarı base64 formatına dönüştürün
           final base64PBKDF2 =
               await Cryptography.keyToBase64(key: pbkdf2DerivedKey2);
 
           if (base64PBKDF2 != derivedPasswordFromDB) {
             print('Password salah');
 
-            return emit(const LoginState.failedLogin('Kesalahan saat login'));
+            return emit(const LoginState.failedLogin('Giriş yaparken hata oluştu'));
           }
 
-          /// convert PBKDF2 derived key kedalam format base64
+          /// PBKDF2'den türetilmiş anahtarı base64 formatına dönüştürün
           final base64PBKDF =
               await Cryptography.keyToBase64(key: pbkdf2DerivedKey);
 
           if (base64PBKDF == null) {
-            print('kesalahan saat convert pbkdf2DerivedKey2 ke base64');
+            print('pbkdf2 Türetilmiş Anahtar 2\'yi base64\'e dönüştürürken hata oluştu');
 
             return emit(
-              const LoginState.failedLogin('Kesalahan saat memproses password'),
+              const LoginState.failedLogin('Şifre işlenirken hata oluştu'),
             );
           }
 
-          /// save data session app
+          /// uygulama oturumu verilerini kaydet
           final appsessionBox = Hive.box<String>(HiveConstants.appsession);
 
           try {
@@ -92,10 +92,10 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
             await appsessionBox.put(HiveConstants.userEmail, account.email);
             await appsessionBox.put(HiveConstants.encryptionKey, base64PBKDF);
           } catch (e) {
-            print('Kesalahan saat persisting data ke hive DB');
+            print('Verileri Hive DB\'ye devam ettirirken hata oluştu');
 
             return emit(
-              const LoginState.failedLogin('Kesalahan saat menyimpan data'),
+              const LoginState.failedLogin('Veri kaydedilirken hata oluştu'),
             );
           }
 

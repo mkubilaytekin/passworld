@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'view_secret_bloc.dart';
 
@@ -26,8 +26,8 @@ mixin _$ViewSecretEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(String name, String emailOrUsername, String password)?
+    TResult? Function()? started,
+    TResult? Function(String name, String emailOrUsername, String password)?
         submitForm,
   }) =>
       throw _privateConstructorUsedError;
@@ -47,8 +47,8 @@ mixin _$ViewSecretEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_SubmitForm value)? submitForm,
+    TResult? Function(_Started value)? started,
+    TResult? Function(_SubmitForm value)? submitForm,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,40 +64,40 @@ mixin _$ViewSecretEvent {
 abstract class $ViewSecretEventCopyWith<$Res> {
   factory $ViewSecretEventCopyWith(
           ViewSecretEvent value, $Res Function(ViewSecretEvent) then) =
-      _$ViewSecretEventCopyWithImpl<$Res>;
+      _$ViewSecretEventCopyWithImpl<$Res, ViewSecretEvent>;
 }
 
 /// @nodoc
-class _$ViewSecretEventCopyWithImpl<$Res>
+class _$ViewSecretEventCopyWithImpl<$Res, $Val extends ViewSecretEvent>
     implements $ViewSecretEventCopyWith<$Res> {
   _$ViewSecretEventCopyWithImpl(this._value, this._then);
 
-  final ViewSecretEvent _value;
   // ignore: unused_field
-  final $Res Function(ViewSecretEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+abstract class _$$StartedImplCopyWith<$Res> {
+  factory _$$StartedImplCopyWith(
+          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
+      __$$StartedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res> extends _$ViewSecretEventCopyWithImpl<$Res>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
-      : super(_value, (v) => _then(v as _$_Started));
-
-  @override
-  _$_Started get _value => super._value as _$_Started;
+class __$$StartedImplCopyWithImpl<$Res>
+    extends _$ViewSecretEventCopyWithImpl<$Res, _$StartedImpl>
+    implements _$$StartedImplCopyWith<$Res> {
+  __$$StartedImplCopyWithImpl(
+      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$StartedImpl implements _Started {
+  const _$StartedImpl();
 
   @override
   String toString() {
@@ -105,9 +105,9 @@ class _$_Started implements _Started {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Started);
+        (other.runtimeType == runtimeType && other is _$StartedImpl);
   }
 
   @override
@@ -127,8 +127,8 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(String name, String emailOrUsername, String password)?
+    TResult? Function()? started,
+    TResult? Function(String name, String emailOrUsername, String password)?
         submitForm,
   }) {
     return started?.call();
@@ -160,8 +160,8 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_SubmitForm value)? submitForm,
+    TResult? Function(_Started value)? started,
+    TResult? Function(_SubmitForm value)? submitForm,
   }) {
     return started?.call(this);
   }
@@ -181,44 +181,43 @@ class _$_Started implements _Started {
 }
 
 abstract class _Started implements ViewSecretEvent {
-  const factory _Started() = _$_Started;
+  const factory _Started() = _$StartedImpl;
 }
 
 /// @nodoc
-abstract class _$$_SubmitFormCopyWith<$Res> {
-  factory _$$_SubmitFormCopyWith(
-          _$_SubmitForm value, $Res Function(_$_SubmitForm) then) =
-      __$$_SubmitFormCopyWithImpl<$Res>;
+abstract class _$$SubmitFormImplCopyWith<$Res> {
+  factory _$$SubmitFormImplCopyWith(
+          _$SubmitFormImpl value, $Res Function(_$SubmitFormImpl) then) =
+      __$$SubmitFormImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String name, String emailOrUsername, String password});
 }
 
 /// @nodoc
-class __$$_SubmitFormCopyWithImpl<$Res>
-    extends _$ViewSecretEventCopyWithImpl<$Res>
-    implements _$$_SubmitFormCopyWith<$Res> {
-  __$$_SubmitFormCopyWithImpl(
-      _$_SubmitForm _value, $Res Function(_$_SubmitForm) _then)
-      : super(_value, (v) => _then(v as _$_SubmitForm));
+class __$$SubmitFormImplCopyWithImpl<$Res>
+    extends _$ViewSecretEventCopyWithImpl<$Res, _$SubmitFormImpl>
+    implements _$$SubmitFormImplCopyWith<$Res> {
+  __$$SubmitFormImplCopyWithImpl(
+      _$SubmitFormImpl _value, $Res Function(_$SubmitFormImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_SubmitForm get _value => super._value as _$_SubmitForm;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? emailOrUsername = freezed,
-    Object? password = freezed,
+    Object? name = null,
+    Object? emailOrUsername = null,
+    Object? password = null,
   }) {
-    return _then(_$_SubmitForm(
-      name: name == freezed
+    return _then(_$SubmitFormImpl(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      emailOrUsername: emailOrUsername == freezed
+      emailOrUsername: null == emailOrUsername
           ? _value.emailOrUsername
           : emailOrUsername // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
@@ -228,8 +227,8 @@ class __$$_SubmitFormCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SubmitForm implements _SubmitForm {
-  const _$_SubmitForm(
+class _$SubmitFormImpl implements _SubmitForm {
+  const _$SubmitFormImpl(
       {required this.name,
       required this.emailOrUsername,
       required this.password});
@@ -247,27 +246,25 @@ class _$_SubmitForm implements _SubmitForm {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SubmitForm &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.emailOrUsername, emailOrUsername) &&
-            const DeepCollectionEquality().equals(other.password, password));
+            other is _$SubmitFormImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.emailOrUsername, emailOrUsername) ||
+                other.emailOrUsername == emailOrUsername) &&
+            (identical(other.password, password) ||
+                other.password == password));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(emailOrUsername),
-      const DeepCollectionEquality().hash(password));
+  int get hashCode => Object.hash(runtimeType, name, emailOrUsername, password);
 
   @JsonKey(ignore: true)
   @override
-  _$$_SubmitFormCopyWith<_$_SubmitForm> get copyWith =>
-      __$$_SubmitFormCopyWithImpl<_$_SubmitForm>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$SubmitFormImplCopyWith<_$SubmitFormImpl> get copyWith =>
+      __$$SubmitFormImplCopyWithImpl<_$SubmitFormImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -283,8 +280,8 @@ class _$_SubmitForm implements _SubmitForm {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(String name, String emailOrUsername, String password)?
+    TResult? Function()? started,
+    TResult? Function(String name, String emailOrUsername, String password)?
         submitForm,
   }) {
     return submitForm?.call(name, emailOrUsername, password);
@@ -316,8 +313,8 @@ class _$_SubmitForm implements _SubmitForm {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(_SubmitForm value)? submitForm,
+    TResult? Function(_Started value)? started,
+    TResult? Function(_SubmitForm value)? submitForm,
   }) {
     return submitForm?.call(this);
   }
@@ -340,13 +337,13 @@ abstract class _SubmitForm implements ViewSecretEvent {
   const factory _SubmitForm(
       {required final String name,
       required final String emailOrUsername,
-      required final String password}) = _$_SubmitForm;
+      required final String password}) = _$SubmitFormImpl;
 
   String get name;
   String get emailOrUsername;
   String get password;
   @JsonKey(ignore: true)
-  _$$_SubmitFormCopyWith<_$_SubmitForm> get copyWith =>
+  _$$SubmitFormImplCopyWith<_$SubmitFormImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -367,14 +364,14 @@ mixin _$ViewSecretState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingSecret,
-    TResult Function(String name, String emailOrUsername, String password)?
+    TResult? Function()? initial,
+    TResult? Function()? fetchingSecret,
+    TResult? Function(String name, String emailOrUsername, String password)?
         successFetchSecret,
-    TResult Function()? failedFetchSecret,
-    TResult Function()? submittingForm,
-    TResult Function()? successSubmitForm,
-    TResult Function(String msg)? failedSubmitForm,
+    TResult? Function()? failedFetchSecret,
+    TResult? Function()? submittingForm,
+    TResult? Function()? successSubmitForm,
+    TResult? Function(String msg)? failedSubmitForm,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -403,13 +400,13 @@ mixin _$ViewSecretState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingSecret value)? fetchingSecret,
-    TResult Function(_SuccessFetchSecret value)? successFetchSecret,
-    TResult Function(_FailedFetchSecret value)? failedFetchSecret,
-    TResult Function(_SubmittingForm value)? submittingForm,
-    TResult Function(_SuccessSubmitForm value)? successSubmitForm,
-    TResult Function(_FailedSubmitForm value)? failedSubmitForm,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingSecret value)? fetchingSecret,
+    TResult? Function(_SuccessFetchSecret value)? successFetchSecret,
+    TResult? Function(_FailedFetchSecret value)? failedFetchSecret,
+    TResult? Function(_SubmittingForm value)? submittingForm,
+    TResult? Function(_SuccessSubmitForm value)? successSubmitForm,
+    TResult? Function(_FailedSubmitForm value)? failedSubmitForm,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -430,40 +427,40 @@ mixin _$ViewSecretState {
 abstract class $ViewSecretStateCopyWith<$Res> {
   factory $ViewSecretStateCopyWith(
           ViewSecretState value, $Res Function(ViewSecretState) then) =
-      _$ViewSecretStateCopyWithImpl<$Res>;
+      _$ViewSecretStateCopyWithImpl<$Res, ViewSecretState>;
 }
 
 /// @nodoc
-class _$ViewSecretStateCopyWithImpl<$Res>
+class _$ViewSecretStateCopyWithImpl<$Res, $Val extends ViewSecretState>
     implements $ViewSecretStateCopyWith<$Res> {
   _$ViewSecretStateCopyWithImpl(this._value, this._then);
 
-  final ViewSecretState _value;
   // ignore: unused_field
-  final $Res Function(ViewSecretState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
+abstract class _$$InitialImplCopyWith<$Res> {
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
+      __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitialCopyWithImpl<$Res> extends _$ViewSecretStateCopyWithImpl<$Res>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
-      : super(_value, (v) => _then(v as _$_Initial));
-
-  @override
-  _$_Initial get _value => super._value as _$_Initial;
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$ViewSecretStateCopyWithImpl<$Res, _$InitialImpl>
+    implements _$$InitialImplCopyWith<$Res> {
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$InitialImpl implements _Initial {
+  const _$InitialImpl();
 
   @override
   String toString() {
@@ -471,9 +468,9 @@ class _$_Initial implements _Initial {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -498,14 +495,14 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingSecret,
-    TResult Function(String name, String emailOrUsername, String password)?
+    TResult? Function()? initial,
+    TResult? Function()? fetchingSecret,
+    TResult? Function(String name, String emailOrUsername, String password)?
         successFetchSecret,
-    TResult Function()? failedFetchSecret,
-    TResult Function()? submittingForm,
-    TResult Function()? successSubmitForm,
-    TResult Function(String msg)? failedSubmitForm,
+    TResult? Function()? failedFetchSecret,
+    TResult? Function()? submittingForm,
+    TResult? Function()? successSubmitForm,
+    TResult? Function(String msg)? failedSubmitForm,
   }) {
     return initial?.call();
   }
@@ -546,13 +543,13 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingSecret value)? fetchingSecret,
-    TResult Function(_SuccessFetchSecret value)? successFetchSecret,
-    TResult Function(_FailedFetchSecret value)? failedFetchSecret,
-    TResult Function(_SubmittingForm value)? submittingForm,
-    TResult Function(_SuccessSubmitForm value)? successSubmitForm,
-    TResult Function(_FailedSubmitForm value)? failedSubmitForm,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingSecret value)? fetchingSecret,
+    TResult? Function(_SuccessFetchSecret value)? successFetchSecret,
+    TResult? Function(_FailedFetchSecret value)? failedFetchSecret,
+    TResult? Function(_SubmittingForm value)? submittingForm,
+    TResult? Function(_SuccessSubmitForm value)? successSubmitForm,
+    TResult? Function(_FailedSubmitForm value)? failedSubmitForm,
   }) {
     return initial?.call(this);
   }
@@ -577,32 +574,29 @@ class _$_Initial implements _Initial {
 }
 
 abstract class _Initial implements ViewSecretState {
-  const factory _Initial() = _$_Initial;
+  const factory _Initial() = _$InitialImpl;
 }
 
 /// @nodoc
-abstract class _$$_FetchingSecretCopyWith<$Res> {
-  factory _$$_FetchingSecretCopyWith(
-          _$_FetchingSecret value, $Res Function(_$_FetchingSecret) then) =
-      __$$_FetchingSecretCopyWithImpl<$Res>;
+abstract class _$$FetchingSecretImplCopyWith<$Res> {
+  factory _$$FetchingSecretImplCopyWith(_$FetchingSecretImpl value,
+          $Res Function(_$FetchingSecretImpl) then) =
+      __$$FetchingSecretImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_FetchingSecretCopyWithImpl<$Res>
-    extends _$ViewSecretStateCopyWithImpl<$Res>
-    implements _$$_FetchingSecretCopyWith<$Res> {
-  __$$_FetchingSecretCopyWithImpl(
-      _$_FetchingSecret _value, $Res Function(_$_FetchingSecret) _then)
-      : super(_value, (v) => _then(v as _$_FetchingSecret));
-
-  @override
-  _$_FetchingSecret get _value => super._value as _$_FetchingSecret;
+class __$$FetchingSecretImplCopyWithImpl<$Res>
+    extends _$ViewSecretStateCopyWithImpl<$Res, _$FetchingSecretImpl>
+    implements _$$FetchingSecretImplCopyWith<$Res> {
+  __$$FetchingSecretImplCopyWithImpl(
+      _$FetchingSecretImpl _value, $Res Function(_$FetchingSecretImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_FetchingSecret implements _FetchingSecret {
-  const _$_FetchingSecret();
+class _$FetchingSecretImpl implements _FetchingSecret {
+  const _$FetchingSecretImpl();
 
   @override
   String toString() {
@@ -610,9 +604,9 @@ class _$_FetchingSecret implements _FetchingSecret {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_FetchingSecret);
+        (other.runtimeType == runtimeType && other is _$FetchingSecretImpl);
   }
 
   @override
@@ -637,14 +631,14 @@ class _$_FetchingSecret implements _FetchingSecret {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingSecret,
-    TResult Function(String name, String emailOrUsername, String password)?
+    TResult? Function()? initial,
+    TResult? Function()? fetchingSecret,
+    TResult? Function(String name, String emailOrUsername, String password)?
         successFetchSecret,
-    TResult Function()? failedFetchSecret,
-    TResult Function()? submittingForm,
-    TResult Function()? successSubmitForm,
-    TResult Function(String msg)? failedSubmitForm,
+    TResult? Function()? failedFetchSecret,
+    TResult? Function()? submittingForm,
+    TResult? Function()? successSubmitForm,
+    TResult? Function(String msg)? failedSubmitForm,
   }) {
     return fetchingSecret?.call();
   }
@@ -685,13 +679,13 @@ class _$_FetchingSecret implements _FetchingSecret {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingSecret value)? fetchingSecret,
-    TResult Function(_SuccessFetchSecret value)? successFetchSecret,
-    TResult Function(_FailedFetchSecret value)? failedFetchSecret,
-    TResult Function(_SubmittingForm value)? submittingForm,
-    TResult Function(_SuccessSubmitForm value)? successSubmitForm,
-    TResult Function(_FailedSubmitForm value)? failedSubmitForm,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingSecret value)? fetchingSecret,
+    TResult? Function(_SuccessFetchSecret value)? successFetchSecret,
+    TResult? Function(_FailedFetchSecret value)? failedFetchSecret,
+    TResult? Function(_SubmittingForm value)? submittingForm,
+    TResult? Function(_SuccessSubmitForm value)? successSubmitForm,
+    TResult? Function(_FailedSubmitForm value)? failedSubmitForm,
   }) {
     return fetchingSecret?.call(this);
   }
@@ -716,44 +710,43 @@ class _$_FetchingSecret implements _FetchingSecret {
 }
 
 abstract class _FetchingSecret implements ViewSecretState {
-  const factory _FetchingSecret() = _$_FetchingSecret;
+  const factory _FetchingSecret() = _$FetchingSecretImpl;
 }
 
 /// @nodoc
-abstract class _$$_SuccessFetchSecretCopyWith<$Res> {
-  factory _$$_SuccessFetchSecretCopyWith(_$_SuccessFetchSecret value,
-          $Res Function(_$_SuccessFetchSecret) then) =
-      __$$_SuccessFetchSecretCopyWithImpl<$Res>;
+abstract class _$$SuccessFetchSecretImplCopyWith<$Res> {
+  factory _$$SuccessFetchSecretImplCopyWith(_$SuccessFetchSecretImpl value,
+          $Res Function(_$SuccessFetchSecretImpl) then) =
+      __$$SuccessFetchSecretImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String name, String emailOrUsername, String password});
 }
 
 /// @nodoc
-class __$$_SuccessFetchSecretCopyWithImpl<$Res>
-    extends _$ViewSecretStateCopyWithImpl<$Res>
-    implements _$$_SuccessFetchSecretCopyWith<$Res> {
-  __$$_SuccessFetchSecretCopyWithImpl(
-      _$_SuccessFetchSecret _value, $Res Function(_$_SuccessFetchSecret) _then)
-      : super(_value, (v) => _then(v as _$_SuccessFetchSecret));
+class __$$SuccessFetchSecretImplCopyWithImpl<$Res>
+    extends _$ViewSecretStateCopyWithImpl<$Res, _$SuccessFetchSecretImpl>
+    implements _$$SuccessFetchSecretImplCopyWith<$Res> {
+  __$$SuccessFetchSecretImplCopyWithImpl(_$SuccessFetchSecretImpl _value,
+      $Res Function(_$SuccessFetchSecretImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_SuccessFetchSecret get _value => super._value as _$_SuccessFetchSecret;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? emailOrUsername = freezed,
-    Object? password = freezed,
+    Object? name = null,
+    Object? emailOrUsername = null,
+    Object? password = null,
   }) {
-    return _then(_$_SuccessFetchSecret(
-      name: name == freezed
+    return _then(_$SuccessFetchSecretImpl(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      emailOrUsername: emailOrUsername == freezed
+      emailOrUsername: null == emailOrUsername
           ? _value.emailOrUsername
           : emailOrUsername // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
@@ -763,8 +756,8 @@ class __$$_SuccessFetchSecretCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SuccessFetchSecret implements _SuccessFetchSecret {
-  const _$_SuccessFetchSecret(
+class _$SuccessFetchSecretImpl implements _SuccessFetchSecret {
+  const _$SuccessFetchSecretImpl(
       {required this.name,
       required this.emailOrUsername,
       required this.password});
@@ -782,27 +775,25 @@ class _$_SuccessFetchSecret implements _SuccessFetchSecret {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SuccessFetchSecret &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.emailOrUsername, emailOrUsername) &&
-            const DeepCollectionEquality().equals(other.password, password));
+            other is _$SuccessFetchSecretImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.emailOrUsername, emailOrUsername) ||
+                other.emailOrUsername == emailOrUsername) &&
+            (identical(other.password, password) ||
+                other.password == password));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(emailOrUsername),
-      const DeepCollectionEquality().hash(password));
+  int get hashCode => Object.hash(runtimeType, name, emailOrUsername, password);
 
   @JsonKey(ignore: true)
   @override
-  _$$_SuccessFetchSecretCopyWith<_$_SuccessFetchSecret> get copyWith =>
-      __$$_SuccessFetchSecretCopyWithImpl<_$_SuccessFetchSecret>(
+  @pragma('vm:prefer-inline')
+  _$$SuccessFetchSecretImplCopyWith<_$SuccessFetchSecretImpl> get copyWith =>
+      __$$SuccessFetchSecretImplCopyWithImpl<_$SuccessFetchSecretImpl>(
           this, _$identity);
 
   @override
@@ -824,14 +815,14 @@ class _$_SuccessFetchSecret implements _SuccessFetchSecret {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingSecret,
-    TResult Function(String name, String emailOrUsername, String password)?
+    TResult? Function()? initial,
+    TResult? Function()? fetchingSecret,
+    TResult? Function(String name, String emailOrUsername, String password)?
         successFetchSecret,
-    TResult Function()? failedFetchSecret,
-    TResult Function()? submittingForm,
-    TResult Function()? successSubmitForm,
-    TResult Function(String msg)? failedSubmitForm,
+    TResult? Function()? failedFetchSecret,
+    TResult? Function()? submittingForm,
+    TResult? Function()? successSubmitForm,
+    TResult? Function(String msg)? failedSubmitForm,
   }) {
     return successFetchSecret?.call(name, emailOrUsername, password);
   }
@@ -872,13 +863,13 @@ class _$_SuccessFetchSecret implements _SuccessFetchSecret {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingSecret value)? fetchingSecret,
-    TResult Function(_SuccessFetchSecret value)? successFetchSecret,
-    TResult Function(_FailedFetchSecret value)? failedFetchSecret,
-    TResult Function(_SubmittingForm value)? submittingForm,
-    TResult Function(_SuccessSubmitForm value)? successSubmitForm,
-    TResult Function(_FailedSubmitForm value)? failedSubmitForm,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingSecret value)? fetchingSecret,
+    TResult? Function(_SuccessFetchSecret value)? successFetchSecret,
+    TResult? Function(_FailedFetchSecret value)? failedFetchSecret,
+    TResult? Function(_SubmittingForm value)? submittingForm,
+    TResult? Function(_SuccessSubmitForm value)? successSubmitForm,
+    TResult? Function(_FailedSubmitForm value)? failedSubmitForm,
   }) {
     return successFetchSecret?.call(this);
   }
@@ -906,39 +897,36 @@ abstract class _SuccessFetchSecret implements ViewSecretState {
   const factory _SuccessFetchSecret(
       {required final String name,
       required final String emailOrUsername,
-      required final String password}) = _$_SuccessFetchSecret;
+      required final String password}) = _$SuccessFetchSecretImpl;
 
   String get name;
   String get emailOrUsername;
   String get password;
   @JsonKey(ignore: true)
-  _$$_SuccessFetchSecretCopyWith<_$_SuccessFetchSecret> get copyWith =>
+  _$$SuccessFetchSecretImplCopyWith<_$SuccessFetchSecretImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FailedFetchSecretCopyWith<$Res> {
-  factory _$$_FailedFetchSecretCopyWith(_$_FailedFetchSecret value,
-          $Res Function(_$_FailedFetchSecret) then) =
-      __$$_FailedFetchSecretCopyWithImpl<$Res>;
+abstract class _$$FailedFetchSecretImplCopyWith<$Res> {
+  factory _$$FailedFetchSecretImplCopyWith(_$FailedFetchSecretImpl value,
+          $Res Function(_$FailedFetchSecretImpl) then) =
+      __$$FailedFetchSecretImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_FailedFetchSecretCopyWithImpl<$Res>
-    extends _$ViewSecretStateCopyWithImpl<$Res>
-    implements _$$_FailedFetchSecretCopyWith<$Res> {
-  __$$_FailedFetchSecretCopyWithImpl(
-      _$_FailedFetchSecret _value, $Res Function(_$_FailedFetchSecret) _then)
-      : super(_value, (v) => _then(v as _$_FailedFetchSecret));
-
-  @override
-  _$_FailedFetchSecret get _value => super._value as _$_FailedFetchSecret;
+class __$$FailedFetchSecretImplCopyWithImpl<$Res>
+    extends _$ViewSecretStateCopyWithImpl<$Res, _$FailedFetchSecretImpl>
+    implements _$$FailedFetchSecretImplCopyWith<$Res> {
+  __$$FailedFetchSecretImplCopyWithImpl(_$FailedFetchSecretImpl _value,
+      $Res Function(_$FailedFetchSecretImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_FailedFetchSecret implements _FailedFetchSecret {
-  const _$_FailedFetchSecret();
+class _$FailedFetchSecretImpl implements _FailedFetchSecret {
+  const _$FailedFetchSecretImpl();
 
   @override
   String toString() {
@@ -946,9 +934,9 @@ class _$_FailedFetchSecret implements _FailedFetchSecret {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_FailedFetchSecret);
+        (other.runtimeType == runtimeType && other is _$FailedFetchSecretImpl);
   }
 
   @override
@@ -973,14 +961,14 @@ class _$_FailedFetchSecret implements _FailedFetchSecret {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingSecret,
-    TResult Function(String name, String emailOrUsername, String password)?
+    TResult? Function()? initial,
+    TResult? Function()? fetchingSecret,
+    TResult? Function(String name, String emailOrUsername, String password)?
         successFetchSecret,
-    TResult Function()? failedFetchSecret,
-    TResult Function()? submittingForm,
-    TResult Function()? successSubmitForm,
-    TResult Function(String msg)? failedSubmitForm,
+    TResult? Function()? failedFetchSecret,
+    TResult? Function()? submittingForm,
+    TResult? Function()? successSubmitForm,
+    TResult? Function(String msg)? failedSubmitForm,
   }) {
     return failedFetchSecret?.call();
   }
@@ -1021,13 +1009,13 @@ class _$_FailedFetchSecret implements _FailedFetchSecret {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingSecret value)? fetchingSecret,
-    TResult Function(_SuccessFetchSecret value)? successFetchSecret,
-    TResult Function(_FailedFetchSecret value)? failedFetchSecret,
-    TResult Function(_SubmittingForm value)? submittingForm,
-    TResult Function(_SuccessSubmitForm value)? successSubmitForm,
-    TResult Function(_FailedSubmitForm value)? failedSubmitForm,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingSecret value)? fetchingSecret,
+    TResult? Function(_SuccessFetchSecret value)? successFetchSecret,
+    TResult? Function(_FailedFetchSecret value)? failedFetchSecret,
+    TResult? Function(_SubmittingForm value)? submittingForm,
+    TResult? Function(_SuccessSubmitForm value)? successSubmitForm,
+    TResult? Function(_FailedSubmitForm value)? failedSubmitForm,
   }) {
     return failedFetchSecret?.call(this);
   }
@@ -1052,32 +1040,29 @@ class _$_FailedFetchSecret implements _FailedFetchSecret {
 }
 
 abstract class _FailedFetchSecret implements ViewSecretState {
-  const factory _FailedFetchSecret() = _$_FailedFetchSecret;
+  const factory _FailedFetchSecret() = _$FailedFetchSecretImpl;
 }
 
 /// @nodoc
-abstract class _$$_SubmittingFormCopyWith<$Res> {
-  factory _$$_SubmittingFormCopyWith(
-          _$_SubmittingForm value, $Res Function(_$_SubmittingForm) then) =
-      __$$_SubmittingFormCopyWithImpl<$Res>;
+abstract class _$$SubmittingFormImplCopyWith<$Res> {
+  factory _$$SubmittingFormImplCopyWith(_$SubmittingFormImpl value,
+          $Res Function(_$SubmittingFormImpl) then) =
+      __$$SubmittingFormImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_SubmittingFormCopyWithImpl<$Res>
-    extends _$ViewSecretStateCopyWithImpl<$Res>
-    implements _$$_SubmittingFormCopyWith<$Res> {
-  __$$_SubmittingFormCopyWithImpl(
-      _$_SubmittingForm _value, $Res Function(_$_SubmittingForm) _then)
-      : super(_value, (v) => _then(v as _$_SubmittingForm));
-
-  @override
-  _$_SubmittingForm get _value => super._value as _$_SubmittingForm;
+class __$$SubmittingFormImplCopyWithImpl<$Res>
+    extends _$ViewSecretStateCopyWithImpl<$Res, _$SubmittingFormImpl>
+    implements _$$SubmittingFormImplCopyWith<$Res> {
+  __$$SubmittingFormImplCopyWithImpl(
+      _$SubmittingFormImpl _value, $Res Function(_$SubmittingFormImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SubmittingForm implements _SubmittingForm {
-  const _$_SubmittingForm();
+class _$SubmittingFormImpl implements _SubmittingForm {
+  const _$SubmittingFormImpl();
 
   @override
   String toString() {
@@ -1085,9 +1070,9 @@ class _$_SubmittingForm implements _SubmittingForm {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_SubmittingForm);
+        (other.runtimeType == runtimeType && other is _$SubmittingFormImpl);
   }
 
   @override
@@ -1112,14 +1097,14 @@ class _$_SubmittingForm implements _SubmittingForm {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingSecret,
-    TResult Function(String name, String emailOrUsername, String password)?
+    TResult? Function()? initial,
+    TResult? Function()? fetchingSecret,
+    TResult? Function(String name, String emailOrUsername, String password)?
         successFetchSecret,
-    TResult Function()? failedFetchSecret,
-    TResult Function()? submittingForm,
-    TResult Function()? successSubmitForm,
-    TResult Function(String msg)? failedSubmitForm,
+    TResult? Function()? failedFetchSecret,
+    TResult? Function()? submittingForm,
+    TResult? Function()? successSubmitForm,
+    TResult? Function(String msg)? failedSubmitForm,
   }) {
     return submittingForm?.call();
   }
@@ -1160,13 +1145,13 @@ class _$_SubmittingForm implements _SubmittingForm {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingSecret value)? fetchingSecret,
-    TResult Function(_SuccessFetchSecret value)? successFetchSecret,
-    TResult Function(_FailedFetchSecret value)? failedFetchSecret,
-    TResult Function(_SubmittingForm value)? submittingForm,
-    TResult Function(_SuccessSubmitForm value)? successSubmitForm,
-    TResult Function(_FailedSubmitForm value)? failedSubmitForm,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingSecret value)? fetchingSecret,
+    TResult? Function(_SuccessFetchSecret value)? successFetchSecret,
+    TResult? Function(_FailedFetchSecret value)? failedFetchSecret,
+    TResult? Function(_SubmittingForm value)? submittingForm,
+    TResult? Function(_SuccessSubmitForm value)? successSubmitForm,
+    TResult? Function(_FailedSubmitForm value)? failedSubmitForm,
   }) {
     return submittingForm?.call(this);
   }
@@ -1191,32 +1176,29 @@ class _$_SubmittingForm implements _SubmittingForm {
 }
 
 abstract class _SubmittingForm implements ViewSecretState {
-  const factory _SubmittingForm() = _$_SubmittingForm;
+  const factory _SubmittingForm() = _$SubmittingFormImpl;
 }
 
 /// @nodoc
-abstract class _$$_SuccessSubmitFormCopyWith<$Res> {
-  factory _$$_SuccessSubmitFormCopyWith(_$_SuccessSubmitForm value,
-          $Res Function(_$_SuccessSubmitForm) then) =
-      __$$_SuccessSubmitFormCopyWithImpl<$Res>;
+abstract class _$$SuccessSubmitFormImplCopyWith<$Res> {
+  factory _$$SuccessSubmitFormImplCopyWith(_$SuccessSubmitFormImpl value,
+          $Res Function(_$SuccessSubmitFormImpl) then) =
+      __$$SuccessSubmitFormImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_SuccessSubmitFormCopyWithImpl<$Res>
-    extends _$ViewSecretStateCopyWithImpl<$Res>
-    implements _$$_SuccessSubmitFormCopyWith<$Res> {
-  __$$_SuccessSubmitFormCopyWithImpl(
-      _$_SuccessSubmitForm _value, $Res Function(_$_SuccessSubmitForm) _then)
-      : super(_value, (v) => _then(v as _$_SuccessSubmitForm));
-
-  @override
-  _$_SuccessSubmitForm get _value => super._value as _$_SuccessSubmitForm;
+class __$$SuccessSubmitFormImplCopyWithImpl<$Res>
+    extends _$ViewSecretStateCopyWithImpl<$Res, _$SuccessSubmitFormImpl>
+    implements _$$SuccessSubmitFormImplCopyWith<$Res> {
+  __$$SuccessSubmitFormImplCopyWithImpl(_$SuccessSubmitFormImpl _value,
+      $Res Function(_$SuccessSubmitFormImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SuccessSubmitForm implements _SuccessSubmitForm {
-  const _$_SuccessSubmitForm();
+class _$SuccessSubmitFormImpl implements _SuccessSubmitForm {
+  const _$SuccessSubmitFormImpl();
 
   @override
   String toString() {
@@ -1224,9 +1206,9 @@ class _$_SuccessSubmitForm implements _SuccessSubmitForm {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_SuccessSubmitForm);
+        (other.runtimeType == runtimeType && other is _$SuccessSubmitFormImpl);
   }
 
   @override
@@ -1251,14 +1233,14 @@ class _$_SuccessSubmitForm implements _SuccessSubmitForm {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingSecret,
-    TResult Function(String name, String emailOrUsername, String password)?
+    TResult? Function()? initial,
+    TResult? Function()? fetchingSecret,
+    TResult? Function(String name, String emailOrUsername, String password)?
         successFetchSecret,
-    TResult Function()? failedFetchSecret,
-    TResult Function()? submittingForm,
-    TResult Function()? successSubmitForm,
-    TResult Function(String msg)? failedSubmitForm,
+    TResult? Function()? failedFetchSecret,
+    TResult? Function()? submittingForm,
+    TResult? Function()? successSubmitForm,
+    TResult? Function(String msg)? failedSubmitForm,
   }) {
     return successSubmitForm?.call();
   }
@@ -1299,13 +1281,13 @@ class _$_SuccessSubmitForm implements _SuccessSubmitForm {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingSecret value)? fetchingSecret,
-    TResult Function(_SuccessFetchSecret value)? successFetchSecret,
-    TResult Function(_FailedFetchSecret value)? failedFetchSecret,
-    TResult Function(_SubmittingForm value)? submittingForm,
-    TResult Function(_SuccessSubmitForm value)? successSubmitForm,
-    TResult Function(_FailedSubmitForm value)? failedSubmitForm,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingSecret value)? fetchingSecret,
+    TResult? Function(_SuccessFetchSecret value)? successFetchSecret,
+    TResult? Function(_FailedFetchSecret value)? failedFetchSecret,
+    TResult? Function(_SubmittingForm value)? submittingForm,
+    TResult? Function(_SuccessSubmitForm value)? successSubmitForm,
+    TResult? Function(_FailedSubmitForm value)? failedSubmitForm,
   }) {
     return successSubmitForm?.call(this);
   }
@@ -1330,34 +1312,33 @@ class _$_SuccessSubmitForm implements _SuccessSubmitForm {
 }
 
 abstract class _SuccessSubmitForm implements ViewSecretState {
-  const factory _SuccessSubmitForm() = _$_SuccessSubmitForm;
+  const factory _SuccessSubmitForm() = _$SuccessSubmitFormImpl;
 }
 
 /// @nodoc
-abstract class _$$_FailedSubmitFormCopyWith<$Res> {
-  factory _$$_FailedSubmitFormCopyWith(
-          _$_FailedSubmitForm value, $Res Function(_$_FailedSubmitForm) then) =
-      __$$_FailedSubmitFormCopyWithImpl<$Res>;
+abstract class _$$FailedSubmitFormImplCopyWith<$Res> {
+  factory _$$FailedSubmitFormImplCopyWith(_$FailedSubmitFormImpl value,
+          $Res Function(_$FailedSubmitFormImpl) then) =
+      __$$FailedSubmitFormImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String msg});
 }
 
 /// @nodoc
-class __$$_FailedSubmitFormCopyWithImpl<$Res>
-    extends _$ViewSecretStateCopyWithImpl<$Res>
-    implements _$$_FailedSubmitFormCopyWith<$Res> {
-  __$$_FailedSubmitFormCopyWithImpl(
-      _$_FailedSubmitForm _value, $Res Function(_$_FailedSubmitForm) _then)
-      : super(_value, (v) => _then(v as _$_FailedSubmitForm));
+class __$$FailedSubmitFormImplCopyWithImpl<$Res>
+    extends _$ViewSecretStateCopyWithImpl<$Res, _$FailedSubmitFormImpl>
+    implements _$$FailedSubmitFormImplCopyWith<$Res> {
+  __$$FailedSubmitFormImplCopyWithImpl(_$FailedSubmitFormImpl _value,
+      $Res Function(_$FailedSubmitFormImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_FailedSubmitForm get _value => super._value as _$_FailedSubmitForm;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? msg = freezed,
+    Object? msg = null,
   }) {
-    return _then(_$_FailedSubmitForm(
-      msg: msg == freezed
+    return _then(_$FailedSubmitFormImpl(
+      msg: null == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1367,8 +1348,8 @@ class __$$_FailedSubmitFormCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FailedSubmitForm implements _FailedSubmitForm {
-  const _$_FailedSubmitForm({required this.msg});
+class _$FailedSubmitFormImpl implements _FailedSubmitForm {
+  const _$FailedSubmitFormImpl({required this.msg});
 
   @override
   final String msg;
@@ -1379,21 +1360,22 @@ class _$_FailedSubmitForm implements _FailedSubmitForm {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FailedSubmitForm &&
-            const DeepCollectionEquality().equals(other.msg, msg));
+            other is _$FailedSubmitFormImpl &&
+            (identical(other.msg, msg) || other.msg == msg));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(msg));
+  int get hashCode => Object.hash(runtimeType, msg);
 
   @JsonKey(ignore: true)
   @override
-  _$$_FailedSubmitFormCopyWith<_$_FailedSubmitForm> get copyWith =>
-      __$$_FailedSubmitFormCopyWithImpl<_$_FailedSubmitForm>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$FailedSubmitFormImplCopyWith<_$FailedSubmitFormImpl> get copyWith =>
+      __$$FailedSubmitFormImplCopyWithImpl<_$FailedSubmitFormImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1414,14 +1396,14 @@ class _$_FailedSubmitForm implements _FailedSubmitForm {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchingSecret,
-    TResult Function(String name, String emailOrUsername, String password)?
+    TResult? Function()? initial,
+    TResult? Function()? fetchingSecret,
+    TResult? Function(String name, String emailOrUsername, String password)?
         successFetchSecret,
-    TResult Function()? failedFetchSecret,
-    TResult Function()? submittingForm,
-    TResult Function()? successSubmitForm,
-    TResult Function(String msg)? failedSubmitForm,
+    TResult? Function()? failedFetchSecret,
+    TResult? Function()? submittingForm,
+    TResult? Function()? successSubmitForm,
+    TResult? Function(String msg)? failedSubmitForm,
   }) {
     return failedSubmitForm?.call(msg);
   }
@@ -1462,13 +1444,13 @@ class _$_FailedSubmitForm implements _FailedSubmitForm {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_FetchingSecret value)? fetchingSecret,
-    TResult Function(_SuccessFetchSecret value)? successFetchSecret,
-    TResult Function(_FailedFetchSecret value)? failedFetchSecret,
-    TResult Function(_SubmittingForm value)? submittingForm,
-    TResult Function(_SuccessSubmitForm value)? successSubmitForm,
-    TResult Function(_FailedSubmitForm value)? failedSubmitForm,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FetchingSecret value)? fetchingSecret,
+    TResult? Function(_SuccessFetchSecret value)? successFetchSecret,
+    TResult? Function(_FailedFetchSecret value)? failedFetchSecret,
+    TResult? Function(_SubmittingForm value)? submittingForm,
+    TResult? Function(_SuccessSubmitForm value)? successSubmitForm,
+    TResult? Function(_FailedSubmitForm value)? failedSubmitForm,
   }) {
     return failedSubmitForm?.call(this);
   }
@@ -1494,10 +1476,10 @@ class _$_FailedSubmitForm implements _FailedSubmitForm {
 
 abstract class _FailedSubmitForm implements ViewSecretState {
   const factory _FailedSubmitForm({required final String msg}) =
-      _$_FailedSubmitForm;
+      _$FailedSubmitFormImpl;
 
   String get msg;
   @JsonKey(ignore: true)
-  _$$_FailedSubmitFormCopyWith<_$_FailedSubmitForm> get copyWith =>
+  _$$FailedSubmitFormImplCopyWith<_$FailedSubmitFormImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

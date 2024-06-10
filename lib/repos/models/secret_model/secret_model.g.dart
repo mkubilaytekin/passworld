@@ -6,7 +6,7 @@ part of 'secret_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Secret _$$_SecretFromJson(Map<String, dynamic> json) => _$_Secret(
+_$SecretImpl _$$SecretImplFromJson(Map<String, dynamic> json) => _$SecretImpl(
       id: json['id'] as String,
       name: json['name'] as String,
       emailOrUsername: json['email_or_username'] as String,
@@ -17,7 +17,8 @@ _$_Secret _$$_SecretFromJson(Map<String, dynamic> json) => _$_Secret(
           : DateTime.parse(json['updated'] as String),
     );
 
-Map<String, dynamic> _$$_SecretToJson(_$_Secret instance) => <String, dynamic>{
+Map<String, dynamic> _$$SecretImplToJson(_$SecretImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'email_or_username': instance.emailOrUsername,

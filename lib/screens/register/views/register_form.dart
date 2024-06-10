@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secureu_mobile/screens/register/bloc/register_bloc.dart';
-import 'package:secureu_mobile/extensions.dart';
+import 'package:passworld/screens/register/bloc/register_bloc.dart';
+import 'package:passworld/extensions.dart';
 
 class RegisterForm extends StatelessWidget {
   RegisterForm({super.key});
@@ -17,11 +17,11 @@ class RegisterForm extends StatelessWidget {
 
   String? _emailValidator(String? email) {
     if (email == null || email.isEmpty) {
-      return 'Email tidak boleh kosong';
+      return 'E-posta boş olamaz';
     }
 
     if (!email.isValidEmail) {
-      return 'Email tidak valid';
+      return 'Geçersiz e-posta';
     }
 
     return null;
@@ -29,11 +29,11 @@ class RegisterForm extends StatelessWidget {
 
   String? _passwordValidator(String? password) {
     if (password == null || password.isEmpty) {
-      return 'Password tidak boleh kosong';
+      return 'Şifre boş olamaz';
     }
 
     if (password.length < 8) {
-      return 'Panjang password minimal 8 karakter';
+      return 'Minimum şifre uzunluğu 8 karakterdir';
     }
 
     return null;
@@ -41,13 +41,13 @@ class RegisterForm extends StatelessWidget {
 
   String? _passwordConfirmationValidator(String? passwordConfirmation) {
     if (passwordConfirmation == null || passwordConfirmation.isEmpty) {
-      return 'Password Konfirmasi tidak boleh kosong';
+      return 'Onay Şifresi boş olamaz';
     }
 
     final password = _passwordController.text;
 
     if (password != passwordConfirmation) {
-      return 'Password Konfirmasi harus sama dengan password';
+      return 'Onay Şifresi şifre ile aynı olmalıdır';
     }
 
     return null;
@@ -192,7 +192,7 @@ class RegisterForm extends StatelessWidget {
                 ),
               ),
               child: const Text(
-                'Daftar',
+                'Kaydol',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 16,

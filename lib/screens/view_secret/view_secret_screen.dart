@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secureu_mobile/screens/view_secret/bloc/view_secret_bloc.dart';
-import 'package:secureu_mobile/screens/view_secret/view/view_secret_form.dart';
+import 'package:passworld/screens/view_secret/bloc/view_secret_bloc.dart';
+import 'package:passworld/screens/view_secret/view/view_secret_form.dart';
 
 class ViewSecretScreen extends StatelessWidget {
   const ViewSecretScreen({super.key});
@@ -15,7 +15,7 @@ class ViewSecretScreen extends StatelessWidget {
         state.whenOrNull(
           failedFetchSecret: () => ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
-              content: Text('Gagal mengambil rahasia'),
+              content: Text('Gizli bilgi alınamadı'),
               backgroundColor: Colors.red,
             ),
           ),
@@ -27,7 +27,7 @@ class ViewSecretScreen extends StatelessWidget {
           ),
           successSubmitForm: () => ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
-              content: Text('Sukses memperbarui rahasia'),
+              content: Text('Gizli anahtar başarıyla güncellendi'),
               backgroundColor: Colors.green,
             ),
           ),
@@ -43,7 +43,7 @@ class ViewSecretScreen extends StatelessWidget {
 
   PreferredSizeWidget _appbar(BuildContext context) {
     return AppBar(
-      title: const Text('Lihat Rahasia'),
+      title: const Text('Gizli bilgiyi görün'),
       centerTitle: true,
       leading: IconButton(
         onPressed: () {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secureu_mobile/screens/view_secret/bloc/view_secret_bloc.dart';
+import 'package:passworld/screens/view_secret/bloc/view_secret_bloc.dart';
 
 class ViewSecretForm extends StatefulWidget {
   const ViewSecretForm({super.key});
@@ -19,27 +19,27 @@ class _ViewSecretFormState extends State<ViewSecretForm> {
   var _hidePasswordField = true;
 
   String? _validateName(String? name) {
-    if (name == null) return 'Nama tidak boleh kosong';
-    if (name.isEmpty) return 'Nama tidak boleh kosong';
+    if (name == null) return 'Ad boş olamaz';
+    if (name.isEmpty) return 'Ad boş olamaz';
 
     return null;
   }
 
   String? _validateEmailOrUsername(String? emailOrUsername) {
     if (emailOrUsername == null) {
-      return 'Email atau Username tidak boleh kosong';
+      return 'E-posta veya Kullanıcı Adı boş olamaz';
     }
 
     if (emailOrUsername.isEmpty) {
-      return 'Email atau Username tidak boleh kosong';
+      return 'E-posta veya Kullanıcı Adı boş olamaz';
     }
 
     return null;
   }
 
   String? _validatePassword(String? password) {
-    if (password == null) return 'Password tidak boleh kosong';
-    if (password.isEmpty) return 'Password tidak boleh kosong';
+    if (password == null) return 'Şifre boş olamaz';
+    if (password.isEmpty) return 'Şifre boş olamaz';
 
     return null;
   }
@@ -93,7 +93,7 @@ class _ViewSecretFormState extends State<ViewSecretForm> {
                     color: Colors.white,
                   ),
                   decoration: InputDecoration(
-                    labelText: 'Nama Rahasia',
+                    labelText: 'Platform Adı',
                     hintStyle: theme.inputDecorationTheme.hintStyle,
                     labelStyle: theme.inputDecorationTheme.labelStyle,
                     border: theme.inputDecorationTheme.border,
@@ -117,7 +117,7 @@ class _ViewSecretFormState extends State<ViewSecretForm> {
                     color: Colors.white,
                   ),
                   decoration: InputDecoration(
-                    labelText: 'Email atau Username Rahasia',
+                    labelText: 'E-posta veya Kullanıcı Adı',
                     hintStyle: theme.inputDecorationTheme.hintStyle,
                     labelStyle: theme.inputDecorationTheme.labelStyle,
                     border: theme.inputDecorationTheme.border,
@@ -143,7 +143,7 @@ class _ViewSecretFormState extends State<ViewSecretForm> {
                     color: Colors.white,
                   ),
                   decoration: InputDecoration(
-                    labelText: 'Password Rahasia',
+                    labelText: 'Şifre',
                     hintStyle: theme.inputDecorationTheme.hintStyle,
                     labelStyle: theme.inputDecorationTheme.labelStyle,
                     border: theme.inputDecorationTheme.border,
@@ -154,8 +154,8 @@ class _ViewSecretFormState extends State<ViewSecretForm> {
                       icon: Icon(
                         color: Colors.white,
                         _hidePasswordField
-                            ? Icons.visibility
-                            : Icons.visibility_off,
+                            ? Icons.visibility_off
+                            : Icons.visibility,
                       ),
                     ),
                   ),
@@ -172,12 +172,12 @@ class _ViewSecretFormState extends State<ViewSecretForm> {
                 child: ElevatedButton(
                   onPressed: state.maybeMap(
                     orElse: () => () {
-                      print('trigger form');
+                      print('formu tetikleme');
 
                       if (_formKey.currentState != null &&
                           !_formKey.currentState!.validate()) return;
 
-                      print('trigger form validate');
+                      print('form doğrulamayı tetikle');
                       final name = _nameController.text;
                       final emailOrUsername = _emailOrUsernameController.text;
                       final password = _passwordController.text;
@@ -204,7 +204,7 @@ class _ViewSecretFormState extends State<ViewSecretForm> {
                     ),
                   ),
                   child: const Text(
-                    'Update Rahasia',
+                    'Güncelleme',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 16,

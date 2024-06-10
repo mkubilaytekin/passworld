@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hive/hive.dart';
-import 'package:secureu_mobile/config/hive_constants.dart';
-import 'package:secureu_mobile/repos/secret_repository.dart';
-import 'package:secureu_mobile/utils/cryptography.dart';
+import 'package:passworld/config/hive_constants.dart';
+import 'package:passworld/repos/secret_repository.dart';
+import 'package:passworld/utils/cryptography.dart';
 
 part 'create_secret_event.dart';
 part 'create_secret_state.dart';
@@ -29,7 +29,7 @@ class CreateSecretBloc extends Bloc<CreateSecretEvent, CreateSecretState> {
           if (!appSessionBox.isOpen) {
             return emit(
               const CreateSecretState.failedSubmittingForm(
-                msg: 'Terjadi Kesalahan',
+                msg: 'Bir hata var',
               ),
             );
           }
@@ -39,7 +39,7 @@ class CreateSecretBloc extends Bloc<CreateSecretEvent, CreateSecretState> {
           if (userId == null) {
             return emit(
               const CreateSecretState.failedSubmittingForm(
-                msg: 'Terjadi Kesalahan',
+                msg: 'Bir hata var',
               ),
             );
           }
@@ -50,7 +50,7 @@ class CreateSecretBloc extends Bloc<CreateSecretEvent, CreateSecretState> {
           if (encryptionKey == null || email == null) {
             return emit(
               const CreateSecretState.failedSubmittingForm(
-                msg: 'Terjadi Kesalahan saat mengambil data',
+                msg: 'Veri alınırken bir hata oluştu',
               ),
             );
           }
@@ -64,7 +64,7 @@ class CreateSecretBloc extends Bloc<CreateSecretEvent, CreateSecretState> {
           if (secretEmailOrUsername == null) {
             return emit(
               const CreateSecretState.failedSubmittingForm(
-                msg: 'Terjadi masalah',
+                msg: 'Bir şeyler yanlış gitti',
               ),
             );
           }
@@ -78,7 +78,7 @@ class CreateSecretBloc extends Bloc<CreateSecretEvent, CreateSecretState> {
           if (secretPassword == null) {
             return emit(
               const CreateSecretState.failedSubmittingForm(
-                msg: 'Terjadi masalah',
+                msg: 'Bir şeyler yanlış gitti',
               ),
             );
           }
@@ -93,7 +93,7 @@ class CreateSecretBloc extends Bloc<CreateSecretEvent, CreateSecretState> {
           if (secretId == null) {
             return emit(
               const CreateSecretState.failedSubmittingForm(
-                msg: 'Terjadi Kesalahan',
+                  msg: 'Bir hata var',
               ),
             );
           }

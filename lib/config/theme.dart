@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SecureUTheme {
+class PassworldTheme {
   static ThemeData of(BuildContext context) {
     final theme = Theme.of(context);
 
     return theme.copyWith(
-      scaffoldBackgroundColor: const Color.fromARGB(255, 64, 62, 62),
+      scaffoldBackgroundColor: const Color.fromARGB(144, 26, 55, 108),
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.transparent,
       ),
@@ -53,7 +53,7 @@ class SecureUTheme {
         ),
       ),
       colorScheme:
-          const ColorScheme.dark(background: Color.fromARGB(255, 64, 62, 62)),
+          const ColorScheme.dark(background: Color.fromARGB(250, 150, 255, 255)),
     );
   }
 }

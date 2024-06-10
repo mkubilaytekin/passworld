@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secureu_mobile/config/theme.dart';
-import 'package:secureu_mobile/config/routes.dart';
-import 'package:secureu_mobile/repos/secret_repository.dart';
-import 'package:secureu_mobile/repos/account_repository.dart';
-import 'package:secureu_mobile/screens/login/login.dart';
-import 'package:secureu_mobile/screens/splash/splash.dart';
-import 'package:secureu_mobile/screens/register/register.dart';
-import 'package:secureu_mobile/screens/dashboard/dashboard.dart';
-import 'package:secureu_mobile/screens/view_secret/view_secret.dart';
-import 'package:secureu_mobile/screens/create_secret/create_secret.dart';
+import 'package:passworld/config/theme.dart';
+import 'package:passworld/config/routes.dart';
+import 'package:passworld/repos/secret_repository.dart';
+import 'package:passworld/repos/account_repository.dart';
+import 'package:passworld/screens/login/login.dart';
+import 'package:passworld/screens/profile/bloc/profile_bloc.dart';
+import 'package:passworld/screens/profile/profile_screen.dart';
+import 'package:passworld/screens/splash/splash.dart';
+import 'package:passworld/screens/register/register.dart';
+import 'package:passworld/screens/dashboard/dashboard.dart';
+import 'package:passworld/screens/view_secret/view_secret.dart';
+import 'package:passworld/screens/create_secret/create_secret.dart';
 
 class PassworldApp extends StatelessWidget {
   const PassworldApp({super.key});
@@ -18,43 +20,49 @@ class PassworldApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: SecureUTheme.of(context),
-      initialRoute: SecureURoutes.splash,
+      theme: PassworldTheme.of(context),
+      initialRoute: PassworldRoutes.splash,
       routes: <String, WidgetBuilder>{
-        SecureURoutes.splash: (_) => BlocProvider(
+        PassworldRoutes.splash: (_) => BlocProvider(
               create: (_) => SplashBloc()..add(const SplashEvent.started()),
               child: const SplashScreen(),
             ),
-        SecureURoutes.login: (_) => BlocProvider(
+        PassworldRoutes.login: (_) => BlocProvider(
               create: (_) => LoginBloc(
-                accountRepo: const AccountRepository(),
+                accountRepo: const AccountRepo(),
               )..add(const LoginEvent.started()),
               child: const LoginScreen(),
             ),
-        SecureURoutes.register: (_) => BlocProvider(
+        PassworldRoutes.register: (_) => BlocProvider(
               create: (_) => RegisterBloc(
-                accountRepo: const AccountRepository(),
+                accountRepo: const AccountRepo(),
               )..add(const RegisterEvent.started()),
               child: const RegisterScreen(),
             ),
-        SecureURoutes.dashboard: (_) => BlocProvider(
+        PassworldRoutes.dashboard: (_) => BlocProvider(
               create: (_) => DashboardBloc(
                 secretRepo: const SecretRepository(),
               )..add(const DashboardEvent.started()),
               child: const DashboardScreen(),
             ),
-        SecureURoutes.createSecret: (_) => BlocProvider(
+        PassworldRoutes.createSecret: (_) => BlocProvider(
               create: (_) => CreateSecretBloc(
                 secretRepo: const SecretRepository(),
               )..add(const CreateSecretEvent.started()),
               child: const CreateSecretScreen(),
             ),
-        SecureURoutes.viewSecret: (_) => BlocProvider(
+        PassworldRoutes.viewSecret: (_) => BlocProvider(
               create: (_) => ViewSecretBloc(
                 secretRepo: const SecretRepository(),
               )..add(const ViewSecretEvent.started()),
               child: const ViewSecretScreen(),
             ),
+        PassworldRoutes.profile: (_) => BlocProvider(
+              create: (_) => ProfileBloc(
+                secretRepo: const SecretRepository(),
+              )..add(const ProfileEvent.started()),
+              child: const ProfileScreen(),
+        ),
       },
     );
   }

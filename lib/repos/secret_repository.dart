@@ -1,6 +1,6 @@
 import 'package:pocketbase/pocketbase.dart';
-import 'package:secureu_mobile/repos/models/secret_model/secret_model.dart';
-import 'package:secureu_mobile/services/pocketbase.dart';
+import 'package:passworld/repos/models/secret_model/secret_model.dart';
+import 'package:passworld/services/pocketbase.dart';
 
 class SecretRepository {
   const SecretRepository();
@@ -12,7 +12,7 @@ class SecretRepository {
     try {
       secret = await pocketbaseClient.collection(_recordName).getOne(secretId);
     } catch (e) {
-      print('gagal mengambil data secret');
+      print('gizli veriler alınamadı');
 
       return null;
     }
@@ -30,7 +30,7 @@ class SecretRepository {
             filter: 'account_id = "$userId"',
           );
     } catch (e) {
-      print('gagal mengambil data secret');
+      print('gizli veriler alınamadı');
 
       return null;
     }
@@ -59,7 +59,7 @@ class SecretRepository {
       recordModel =
           await pocketbaseClient.collection(_recordName).create(body: body);
     } catch (e) {
-      print('Gagal membuat data secret');
+      print('Gizli veriler oluşturulamadı');
 
       return null;
     }
@@ -85,7 +85,7 @@ class SecretRepository {
           .collection(_recordName)
           .update(secretId, body: body);
     } catch (e) {
-      print('gagal mengupdate secret $secretId');
+      print('gizli bilgi güncellenemedi $secretId');
 
       return null;
     }
@@ -99,7 +99,7 @@ class SecretRepository {
             secretId,
           );
     } catch (e) {
-      print('gagal menghapus secret $secretId');
+      print('gizli bilgi silinemedi $secretId');
 
       return null;
     }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secureu_mobile/config/routes.dart';
-import 'package:secureu_mobile/screens/splash/splash.dart';
+import 'package:passworld/config/routes.dart';
+import 'package:passworld/screens/splash/splash.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -14,7 +14,7 @@ class SplashScreen extends StatelessWidget {
       listener: (context, state) {
         state.whenOrNull(
           finishedFetchingData: () {
-            Navigator.pushReplacementNamed(context, SecureURoutes.login);
+            Navigator.pushReplacementNamed(context, PassworldRoutes.login);
           },
         );
       },
@@ -26,7 +26,7 @@ class SplashScreen extends StatelessWidget {
           children: [
             Center(
               child: Text(
-                'SecureU',
+                'PassworLd',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,

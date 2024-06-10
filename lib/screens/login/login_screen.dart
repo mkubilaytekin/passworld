@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secureu_mobile/config/routes.dart';
-import 'package:secureu_mobile/screens/login/login.dart';
-import 'package:secureu_mobile/screens/login/views/login_form.dart';
+import 'package:passworld/config/routes.dart';
+import 'package:passworld/screens/login/login.dart';
+import 'package:passworld/screens/login/views/login_form.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
       listener: (context, state) => state.whenOrNull(
         successLogin: () => Navigator.pushReplacementNamed(
           context,
-          SecureURoutes.dashboard,
+          PassworldRoutes.dashboard,
         ),
         failedLogin: (msg) => ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -33,7 +33,7 @@ class LoginScreen extends StatelessWidget {
           children: [
             const Center(
               child: Text(
-                'SecureU',
+                'PassworLd',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
             ),
             const Center(
               child: Text(
-                'Selamat Datang Kembali !',
+                'Tekrar Hoşgeldiniz !',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
@@ -64,12 +64,12 @@ class LoginScreen extends StatelessWidget {
               child: TextButton(
                 onPressed: loginBloc.state.maybeMap(
                   orElse: () => () {
-                    Navigator.pushNamed(context, SecureURoutes.register);
+                    Navigator.pushNamed(context, PassworldRoutes.register);
                   },
                   submittingLogin: (_) => null,
                 ),
                 child: const Text(
-                  'Belum punya akun',
+                  'Henüz bir hesabınız yok',
                   style: TextStyle(
                     decoration: TextDecoration.underline,
                   ),

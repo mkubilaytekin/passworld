@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:secureu_mobile/screens/create_secret/bloc/create_secret_bloc.dart';
-import 'package:secureu_mobile/screens/create_secret/view/create_secret_form.dart';
+import 'package:passworld/screens/create_secret/bloc/create_secret_bloc.dart';
+import 'package:passworld/screens/create_secret/view/create_secret_form.dart';
 
 class CreateSecretScreen extends StatelessWidget {
   const CreateSecretScreen({super.key});
@@ -18,7 +18,7 @@ class CreateSecretScreen extends StatelessWidget {
               const SnackBar(
                 backgroundColor: Colors.green,
                 content: Text(
-                  'Sukses membuat Rahasia',
+                  'Gizli bilgi oluşturma başarılı',
                 ),
               ),
             );
@@ -46,7 +46,7 @@ class CreateSecretScreen extends StatelessWidget {
 
   PreferredSizeWidget _appbar(BuildContext context) {
     return AppBar(
-      title: const Text('Tambahkan Rahasia'),
+      title: const Text('Gizli Bilgi Ekle'),
       centerTitle: true,
       leading: IconButton(
         onPressed: () => Navigator.of(context).pop(),

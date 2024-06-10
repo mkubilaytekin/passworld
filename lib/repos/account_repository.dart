@@ -1,9 +1,9 @@
 import 'package:pocketbase/pocketbase.dart';
-import 'package:secureu_mobile/repos/models/account_model/account_model.dart';
-import 'package:secureu_mobile/services/pocketbase.dart';
+import 'package:passworld/repos/models/account_model/account_model.dart';
+import 'package:passworld/services/pocketbase.dart';
 
-class AccountRepository {
-  const AccountRepository();
+class AccountRepo {
+  const AccountRepo();
   static const recordName = 'accounts';
 
   Future<Account?> getAccountByEmail(String email) async {
@@ -14,7 +14,7 @@ class AccountRepository {
           .collection(recordName)
           .getFullList(filter: 'email = "$email"');
     } catch (e) {
-      print('gagal mengambil ');
+      print('Alınamadı');
 
       return null;
     }
@@ -37,7 +37,7 @@ class AccountRepository {
             filter: 'email = "$email"',
           );
     } catch (e) {
-      print('gagal mengambil ');
+      print('Alınamadı');
 
       return null;
     }
@@ -56,7 +56,7 @@ class AccountRepository {
 
       model = await pocketbaseClient.collection(recordName).create(body: body);
     } catch (e) {
-      print('gagal membuat akun');
+      print('Hesap oluşturulamadı');
 
       return null;
     }
